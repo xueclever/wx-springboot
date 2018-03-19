@@ -1,0 +1,685 @@
+<div id="page-content">
+    <div class="row">
+        <div class="top-handle-btn">
+            <form id="search-form" action="javascript:;">
+                <a href="#modal-add" class="btn purple radius6" data-toggle="modal"><i class="fa fa-plus"></i> 添加配置</a>
+                <a href="#modal-add-mch" class="btn green radius6" data-toggle="modal"><i class="fa fa-certificate"></i>
+                    商户证书配置</a>
+                <button class="btn purple right search radius6" style="display: none"><i class="fa fa-search"></i> 查询
+                </button>
+            </form>
+        </div>
+    </div>
+    <div id="modals">
+
+        <div class="modal fade" id="modal-add-app" tabindex="-1" role="basic" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true"></button>
+                        <h4 class="modal-title">应用管理</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:;" method="post">
+                            <input type="hidden" name="mpid" value=""/>
+                            <table class="table table-striped table-bordered " id="app-table" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>应用名称</th>
+                                    <th>应用ID</th>
+                                    <th>secret</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn dark green btn-save radius6" data-toggle="modal"
+                           onclick="$('#modal-add-new-app input').val('');
+                           $('#modal-add-new-app').find('input[name=mpid]').val($('#modal-add-app').find('input[name=mpid]').val())"
+                           href="#modal-add-new-app"><i class="fa fa-plus"></i> 新增</a>
+                        <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                                class="fa fa-close"></i> 关闭
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="modal-add-new-app" tabindex="-1" role="basic" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true"></button>
+                        <h4 class="modal-title">编辑应用</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:;" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="">
+                            <input type="hidden" name="mpid" value="">
+                            <table class="table table-striped table-bordered " width="100%">
+                                <tr>
+                                    <th>应用名称</th>
+                                    <td>
+                                        <input type="text" class=" form-control inline " name="agentName"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>应用ID</th>
+                                    <td>
+                                        <input type="text" class=" form-control inline " name="agentId"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>secret</th>
+                                    <td>
+                                        <input type="text" class=" form-control inline " name="secret"
+                                               value="">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn dark green btn-save radius6" onclick="saveApp(this);"><i
+                                class="fa fa-save"></i> 保存
+                        </button>
+                        <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                                class="fa fa-close"></i> 关闭
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+
+        <div class="modal fade" id="modal-add-mch" tabindex="-1" role="basic" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true"></button>
+                        <h4 class="modal-title">微信支付商户证书</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:;" method="post">
+                            <table class="table table-striped table-bordered " id="mch-table" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>商户号</th>
+                                    <th>p12证书</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn dark green btn-save radius6" data-toggle="modal"
+                           onclick="$('#modal-add-new-mch input').val('')"
+                           href="#modal-add-new-mch"><i class="fa fa-plus"></i> 新增</a>
+                        <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                                class="fa fa-close"></i> 关闭
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="modal-add-new-mch" tabindex="-1" role="basic" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true"></button>
+                        <h4 class="modal-title">微信支付商户证书编辑</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:;" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="">
+                            <table class="table table-striped table-bordered " width="100%">
+                                <tr>
+                                    <th>mch_no：</th>
+                                    <td>
+                                        <input type="text" class=" form-control inline " name="mchNo"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>mch_key：</th>
+                                    <td>
+                                        <input type="text" class=" form-control inline " name="mchKey"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>p12Path：</th>
+                                    <td>
+                                        <input type="file" class="  form-control inline " name="p12Data"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn dark green btn-save radius6" onclick="saveMch(this);"><i
+                                class="fa fa-save"></i> 保存
+                        </button>
+                        <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                                class="fa fa-close"></i> 关闭
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="modal-add" tabindex="-1" role="basic" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true"></button>
+                        <h4 class="modal-title">添加公众号基本配置</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:;" method="post">
+                            <table class="table table-striped table-bordered " width="100%">
+                                <tr>
+                                    <th>公众号名称：</th>
+                                    <td>
+                                        <input type="text" class=" input-medium form-control inline " name="nickName"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>开发者ID
+                                        (AppID)
+                                    </th>
+                                    <td>
+                                        <input type="text" class=" input-medium form-control inline " name="appid"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>原始ID</th>
+                                    <td>
+                                        <input type="text" class=" input-medium form-control inline " name="ghid"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>开发者密码
+                                        (AppSecret)
+                                    </th>
+                                    <td>
+                                        <input type="text" class=" input-large form-control inline " name="secret"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <!--<tr>-->
+                                <!--<th>关注二维码</th>-->
+                                <!--<td>-->
+                                <!--<div class="pull-left">-->
+                                <!--<input type="file" class="hidden">-->
+                                <!--<a href="javascript:;" style="width: 100px;height: 100px;"-->
+                                <!--class="btn-upload">-->
+                                <!--<span class="img-tip">选择图片</span>-->
+                                <!--<img name="subQr" src="" width="100" height="100">-->
+                                <!--</a>-->
+                                <!--<input type="hidden" name="subQr" value=""/>-->
+                                <!--</div>-->
+                                <!--</td>-->
+                                <!--</tr>-->
+                                <tr>
+                                    <th>令牌
+                                        (Token)
+                                    </th>
+                                    <td>
+                                        <input type="text" class=" input-large form-control inline " name="token"
+                                               value="">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>消息加解密密钥
+                                        (EncodingAESKey)
+                                    </th>
+                                    <td>
+                                        <input type="text" class=" input-large form-control inline "
+                                               name="encodingAesKey"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>网页授权URL</th>
+                                    <td>
+                                        <input type="url" class=" input-large form-control inline " name="authUrl"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>网页授权作用域</th>
+                                    <td>
+                                        <select name="authScope" class=" input-medium form-control inline ">
+                                            <option value="snsapi_base">snsapi_base</option>
+                                            <option value="snsapi_userinfo">snsapi_userinfo</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>第三方授权URL</th>
+                                    <td>
+                                        <input type="url" class=" input-large form-control inline "
+                                               name="componentAuthorizeUrl" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>第三方网页授权URL</th>
+                                    <td>
+                                        <input type="url" class=" input-large form-control inline "
+                                               name="componentAuthorizeOpenidUrl"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>商户号</th>
+                                    <td>
+                                        <select name="mchId" class=" input-small form-control inline ">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn dark green btn-save radius6"><i class="fa fa-check"></i> 添加
+                        </button>
+                        <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                                class="fa fa-close"></i> 关闭
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <div class="modal fade" id="modal-edit" tabindex="-1" role="basic" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true"></button>
+                        <h4 class="modal-title">修改公众号基本配置</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:;" method="post">
+                            <input type="hidden" name="id" value="">
+                            <table class="table table-striped table-bordered " width="100%">
+                                <tr>
+                                    <th>公众号名称</th>
+                                    <td>
+                                        <input type="text" class=" input-medium form-control inline " name="nickName"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>开发者ID
+                                        (AppID)
+                                    </th>
+                                    <td>
+                                        <input type="text" class=" input-medium form-control inline " name="appid"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>原始ID</th>
+                                    <td>
+                                        <input type="text" class=" input-medium form-control inline " name="ghid"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>开发者密码
+                                        (AppSecret)
+                                    </th>
+                                    <td>
+                                        <input type="text" class=" input-large form-control inline " name="secret"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <!--<tr>-->
+                                <!--<th>关注二维码</th>-->
+                                <!--<td>-->
+                                <!--<div class="pull-left">-->
+                                <!--<input type="file" class="hidden">-->
+                                <!--<a href="javascript:;" style="width: 100px;height: 100px;"-->
+                                <!--class="btn-upload">-->
+                                <!--<span class="img-tip">选择图片</span>-->
+                                <!--<img name="subQr" src="" width="100" height="100">-->
+                                <!--</a>-->
+                                <!--<input type="hidden" name="subQr" value=""/>-->
+                                <!--</div>-->
+                                <!--</td>-->
+                                <!--</tr>-->
+                                <tr>
+                                    <th>令牌
+                                        (Token)
+                                    </th>
+                                    <td>
+                                        <input type="text" class=" input-large form-control inline " name="token"
+                                               value="">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>消息加解密密钥
+                                        (EncodingAESKey)
+                                    </th>
+                                    <td>
+                                        <input type="text" class=" input-large form-control inline "
+                                               name="encodingAesKey"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>网页授权URL</th>
+                                    <td>
+                                        <input type="url" class=" input-large form-control inline " name="authUrl"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>网页授权作用域</th>
+                                    <td>
+                                        <select name="authScope" class=" input-medium form-control inline ">
+                                            <option value="snsapi_base">snsapi_base</option>
+                                            <option value="snsapi_userinfo">snsapi_userinfo</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>第三方授权URL</th>
+                                    <td>
+                                        <input type="url" class=" input-large form-control inline "
+                                               name="componentAuthorizeUrl" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>第三方网页授权URL</th>
+                                    <td>
+                                        <input type="url" class=" input-large form-control inline "
+                                               name="componentAuthorizeOpenidUrl"
+                                               value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>商户号</th>
+                                    <td>
+                                        <select name="mchId" class=" input-small form-control inline ">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn dark green btn-save radius6"><i class="fa fa-save"></i> 保存
+                        </button>
+                        <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                                class="fa fa-close"></i> 关闭
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+    </div>
+
+    <div class="row">
+        <table id="mps-table" class="table table-striped table-bordered table-hover" width="100%">
+            <thead>
+            <tr>
+                <th>mpid</th>
+                <th>appid</th>
+                <th>公众号名称</th>
+                <th>开放平台</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        registerImageUploadComponent();
+        var resourceUrl = "/mps";
+        DataTable.init({
+            url: resourceUrl,//ajax请求url
+            tableName: "mps-table",//数据表table id
+            paramsFormName: "search-form",//查询参数form id
+            modal: "modals",//模态框div
+            columns: [//列对应的字段数组
+                {data: "id"},
+                {data: "appid"},
+                {data: "nickName"},
+                {data: "serviceTypeInfo", replaceFn: "serviceTypeInfoReplace"},
+                {data: "subQr", visible: false},
+                {data: "mchId", visible: false},
+                {data: "secret", visible: false},
+                {data: "authUrl", visible: false},
+                {data: "token", visible: false},
+                {data: "authScope", visible: false},
+                {data: "encodingAesKey", visible: false},
+                {data: "ghid", visible: false},
+                {data: "componentAuthorizeUrl", visible: false},
+                {data: "componentAuthorizeOpenidUrl", visible: false},
+
+            ],
+            options: [//操作区域(id)
+                {icon: "fa fa-edit", edit: true, editMain: true, option: "modal-edit", url: resourceUrl},
+//                {icon: "fa fa-history", pre: "toAuth"},
+                {icon: "fa fa-shopping-cart", name: "应用管理", pre: "showAppListModal"},
+                {icon: "fa fa-remove", del: resourceUrl},
+            ],
+            handles: {
+                insert: [
+                    {url: resourceUrl, modalId: "modal-add"}
+                ],
+            },
+            endFnOnce: "loadMchInfo"
+        });
+    });
+
+
+    function serviceTypeInfoReplace(val) {
+        if (val == null || val == "") {
+            return "未授权";
+        }
+        if (parseInt(val) == 0) {
+            return "订阅号";
+        } else if (parseInt(val) == 1) {
+            return "订阅号（旧）";
+        } else if (parseInt(val) == 2) {
+            return "服务号";
+        }
+    }
+
+    // function toAuth(obj) {
+    //     Shinez.get("/mps/toAuth",{mpid:obj},function (ret) {
+    //         if(ret.status==0){
+    //             location.href = ret.data.obj;
+    //         }else{
+    //             showTip("danger",ret.info);
+    //         }
+    //     })
+
+    // }
+
+    function loadMchInfo() {
+        setTimeout(function () {
+            Shinez.get("/mch", function (ret) {
+                if (ret.code == 0) {
+                    $("#modal-add-mch").find("tbody").html("");
+                    $.each(ret.data.arrayList, function (k, v) {
+                        $("#modal-add-mch").find("tbody").append("<tr data-id=mch" + v.id + ">" +
+                            "<td data-name='mchNo' data-value='" + v.mchNo + "'>" + v.mchNo + "</td>" +
+                            "<td data-name='mchKey' style='display: none' data-value='" + v.mchKey + "'>" + v.mchKey + "</td>" +
+                            "<td data-name='p12SetFlag' data-value='" + v.p12SetFlag + "'>" + (v.p12SetFlag ? '已上传' : '未上传') + "</td>" +
+                            "<td><a class='btn'  href='#modal-add-new-mch'data-toggle='modal'  onclick='DataTable.rowToModal(\"mch\"+ " + v.id + ",\"modal-add-new-mch\")'><i class='fa fa-edit'></i></a>" +
+                            "<a  class='btn' onclick='delMch(this," + v.id + ");'><i class='fa fa-remove'></i></a></td>" +
+                            "</tr>");
+                    });
+                }
+                loadSelect(ret.data.arrayList);
+            });
+        }, 1000);
+    }
+
+    function loadSelect(list) {
+        $("select[name=mchId]").html("<option value=''>无</option>");
+        $.each(list, function (k, v) {
+            $("select[name=mchId]").append("<option value='" + v.id + "'>" + v.mchNo + "</option>");
+        });
+    }
+
+    function saveMch() {
+        var id = $("#modal-add-new-mch").find("input[name=id]").val();
+        if (id != null && id != "") {
+            id = id.replace("mch", "");
+            $("#modal-add-new-mch").find("input[name=id]").val(id);
+        }
+        Shinez.xhrf("/mch", $("#modal-add-new-mch").find("form")[0], false, function () {
+            loadMchInfo();
+            $("#modal-add-new-mch").modal('hide');
+        });
+    }
+
+    function delMch(obj, id) {
+        bootbox.confirm("真要删除吗？", function (result) {
+            if (result) {
+                Shinez.del("/mch/" + id, function (ret) {
+                    if (ret.code == 0) {
+                        $(obj).parents("tr[data-id=mch" + id + "]").remove();
+                        loadMchInfo();
+                    }
+                });
+            }
+        });
+
+    }
+
+    function showAppListModal(id) {
+        $("#modal-add-app").modal('show');
+        $("#modal-add-app").find("input[name=mpid]").val(id);
+
+        //查询应用
+        loadAppListByMpid(id);
+    }
+
+    function loadAppListByMpid(mpid) {
+        $("#modal-add-app").find("tbody").html("");
+        Shinez.get("/mps/" + mpid + "/app", function (ret) {
+            if (ret.code == 0) {
+                var list = ret.data.arrayList;
+                $.each(list, function (k, v) {
+                    $("#modal-add-app").find("tbody").append('<tr data-id="app' + v.id + '">' +
+                        '<td style="display: none;" data-name="id">' + v.id + '</td>' +
+                        '<td style="display: none;" data-name="mpid">' + v.mpid + '</td>' +
+                        '<td data-name="agentName">' + v.agentName + '</td>' +
+                        '<td data-name="agentId">' + v.agentId + '</td>' +
+                        '<td data-name="secret">' + v.secret + '</td>' +
+                        '<td>' +
+                        '<a class="btn " onclick="setAppEdit(this)"  style="color: #333;font-size:18px;" ><i class="fa fa-edit"></i></a>' +
+                        '<a class="btn  " onclick="delApp(this)"  style="color: #333;font-size:18px;" ><i class="fa fa-close"></i></a>' +
+                        '</td>' +
+                        '</tr>');
+                });
+            }
+        })
+    }
+
+    function saveApp() {
+        var id = $("#modal-add-new-app").find("input[name=id]").val();
+        var mpid = $("#modal-add-new-app").find("input[name=mpid]").val();
+        if (!(id == null || id == "" || id == "undefined" || id == "null")) {
+            Shinez.put("/mps/" + mpid + "/app/" + id, $("#modal-add-new-app").find("form").serialize(), function (ret) {
+                if (ret.code == 0) {
+                    $("#modal-add-new-app").modal('hide');
+                    loadAppListByMpid(mpid);
+                    Shinez.tip("success", "修改成功");
+                } else {
+                    Shinez.tip("error", ret.msg);
+                }
+            });
+        } else {
+            Shinez.post("/mps/" + mpid + "/app", $("#modal-add-new-app").find("form").serialize(), function (ret) {
+                if (ret.code == 0) {
+                    $("#modal-add-new-app").modal('hide');
+                    loadAppListByMpid(mpid);
+                    Shinez.tip("success", "添加成功");
+                } else {
+                    Shinez.tip("error", ret.msg);
+                }
+            });
+        }
+
+    }
+
+
+    //    '<td style="display: none;" data-name="id">' + v.id + '</td>' +
+    //    '<td style="display: none;" data-name="mpid">' + v.mpid + '</td>' +
+    //    '<td data-name="agentName">' + v.agentName + '</td>' +
+    //    '<td data-name="agentId">' + v.agentId + '</td>' +
+    //    '<td data-name="secret">' + v.secret + '</td>' +
+    function setAppEdit(obj) {
+        var id = $(obj).parents("td").siblings("td[data-name=id]").html();
+        var mpid = $(obj).parents("td").siblings("td[data-name=mpid]").html();
+        var agentName = $(obj).parents("td").siblings("td[data-name=agentName]").html();
+        var agentId = $(obj).parents("td").siblings("td[data-name=agentId]").html();
+        var secret = $(obj).parents("td").siblings("td[data-name=secret]").html();
+        var app = {id: id, mpid: mpid, agentName: agentName, agentId: agentId, secret: secret};
+        $.each(app, function (k, v) {
+            $("#modal-add-new-app").find("*[name=" + k + "]").val(v);
+        })
+        $("#modal-add-new-app").modal("show");
+
+    }
+
+    function delApp(obj) {
+        var id = $(obj).parents("td").siblings("td[data-name=id]").html();
+        var mpid = $(obj).parents("td").siblings("td[data-name=mpid]").html();
+        bootbox.confirm("确定要删除该应用配置吗(微信企业号后台不受影响)？", function (result) {
+            if (result) {
+                Shinez.del("/mps/"+mpid+"/app/"+id,function (ret) {
+                    if (ret.code == 0) {
+                        Shinez.tip("success","删除成功");
+                        loadAppListByMpid(mpid)
+                    }
+                });
+            }
+        })
+    }
+
+</script>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kexiang</artifactId>
+        <groupId>com.wmeimob</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>kexiang-wechat-base</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.wmeimob</groupId>
+            <artifactId>kexiang-tool</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wmeimob</groupId>
+            <artifactId>kexiang-kernel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wmeimob</groupId>
+            <artifactId>kexiang-common</artifactId>
+        </dependency>
+        <!-- cxf -->
+         <dependency>
+             <groupId>org.apache.cxf</groupId>
+              <artifactId>cxf-rt-frontend-jaxws</artifactId>
+              <version>3.1.6</version>
+          </dependency>
+          
+          <dependency>
+              <groupId>org.apache.cxf</groupId>
+              <artifactId>cxf-rt-transports-http</artifactId>
+            <version>3.1.6</version>
+         </dependency>
+         <!-- cxf -->
+         
+         <!-- axis --> 
+          <dependency>
+		    <groupId>org.apache.axis</groupId>
+		    <artifactId>axis</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>axis</groupId>
+		    <artifactId>axis-jaxrpc</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-discovery</groupId>
+		    <artifactId>commons-discovery</artifactId>
+		    <version>0.5</version>
+		</dependency>
+		<!--axis  -->
+         
+         <!-- tencent 短信 -->
+         <dependency>
+			  <groupId>com.github.qcloudsms</groupId>
+			  <artifactId>qcloudsms</artifactId>
+			  <version>1.0.2</version>
+			</dependency>
+		<!--  tencent 短信 -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>net.sourceforge.nekohtml</groupId>-->
+            <!--<artifactId>nekohtml</artifactId>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+        
+       
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.wmeimob.KexiangWechatApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

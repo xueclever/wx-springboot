@@ -1,0 +1,75 @@
+<form id="search-form" action="javascript:">
+    每页显示：<input name="pageSize" class="form-control  input-small inline" type="number" min="2" max="50" style="width: 70px !important;"
+        value="10" />
+
+    <div style="display: inline-block;position: relative;top: 11px;">
+        <div class="input-group date  form_datetime " style="float: left">
+            <span style="margin:8px">下单时间</span>
+            <input type="text" size="16" name="startTime" readonly class="form-control input-small inline" />
+            <span class="input-group-btn">
+                                        <button class="btn default date-set" type="button">
+                                            <i class="fa fa-calendar"></i>
+                                        </button>
+                                        </span>
+        </div>
+        <div class="input-group date  form_datetime " style="float: left">
+            <input type="text" size="16" name="endTime" readonly class="form-control input-small inline" />
+            <span class="input-group-btn">
+                                        <button class="btn default date-set" type="button">
+                                            <i class="fa fa-calendar"></i>
+                                        </button>
+                                        </span>
+        </div>
+    </div>
+
+    <select name="userSchoolId" class=" input-medium form-control inline select2-multiple">
+        <option value="">选择学校</option>
+    </select>
+
+
+    <!--订单状态 1未付款 2未提货 3已完成 4已撤销 5待退款 6已退款',-->
+    <!--下拉框-->
+    <select name="orderStatus" class=" input-small form-control inline ">
+        <option value="">订单状态</option>
+        <option value="1">未付款</option>
+        <option value="2">未提货</option>
+        <option value="3">已完成</option>
+        <option value="4">已撤销</option>
+        <option value="5">待退款</option>
+        <option value="6">已退款</option>
+    </select>
+
+
+    <!--文本框-->
+    <input type="text" class=" input-small form-control inline" name="userFullName" placeholder="姓名" />
+    <input type="text" class=" input-medium form-control inline " name="userTel" placeholder="手机号" />
+    <input type="text" class=" input-large form-control inline " name="orderNo" placeholder="订单号" />
+
+    <!--单选框-->
+    <label class="mt-radio"><input type="radio" name="isPublish" value="1"/><span></span>普通[一般] </label>
+    <label class="mt-radio"> <input type="radio" name="isPublish" value="2"/><span></span> 服务人员[线下义卖]</label>
+    <label class="mt-radio"> <input type="radio" name="isPublish" value="5"/> <span></span> 服务人员[不限]</label>
+    <input type="hidden" name="roleType" data-ref="isPublish" value="" />
+
+    <a type="button" class="btn green right  radius6" href="#modal-add" data-toggle="modal"><i class="fa fa-plus"></i> 新增</a>
+    <button class="btn purple right search radius6"><i class="fa fa-search"></i> 查询</button>
+    <button type="button" class='btn blue output-btn radius6' onclick="javascript:;"><i
+            class="fa fa-download"></i> 导出详情
+    </button>
+</form>
+
+<script>
+    //日期初始化
+    $(".form_datetime").datepicker({
+        format: "yyyy-mm-dd",
+        language: 'zh-CN',
+        autoclose: 1,
+        todayBtn: 1
+    });
+
+    var date = new Date();
+    date = Shinez.FormateDate(date, "yyyy-MM-dd");
+    $("input[name=startDate]").val(date);
+    $("input[name=endDate]").val(date);
+    $('.form_datetime').datepicker('update');
+</script>

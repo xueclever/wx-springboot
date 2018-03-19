@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>运单详情+</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.1.3/weui.min.js"></script>
+    <script type="text/javascript" src="js/config/config.js"></script>
+    <script type="text/javascript" src="js/config/wechat-handler.js"></script>
+</head>
+<body>
+<div class="scroller">
+    <div class="detail-order">
+        <h2>运单编号<span id="orderNo">ZX19234002</span></h2>
+        <p>创建时间<span id="createTime">2018-10-10 11:10:10</span></p>
+    </div>
+    <div class="detail-mes">
+        <h2><span><img src="images/shou.png" width="100%">收件方</span><span id="recMode">直达</span></h2>
+        <p><span><img src="images/a1.png" width="100%"><span id="recPerson">可爱又迷人的反派角色</span></span><span><img src="images/a2.png" width="100%"><span id="recTel">18714971712</span></span>
+        </p>
+        <p><span><img src="images/a16.png" width="100%"><span id="recUnitName">上海美盟软件科技有限公司</span></span></p>
+        <p><span><img src="images/a3.png" width="100%"><span id="recAddress">上海宝山区逸仙路8888弄100号505</span></span></p>
+    </div>
+    <div class="detail-mes">
+        <h2><span style="color: #6896F3"><img src="images/fa.png" width="100%">发件方</span><span style="color: #6896F3">回单份数<span id="receipt"></span></span>
+        </h2>
+        <p><span><img src="images/a21.png" width="100%"><span id="mailPerson">可爱又迷人的反派角色</span></span><span><img src="images/a17.png" width="100%"><span id="mailTel">18714971712</span></span>
+        </p>
+        <p><span><img src="images/a18.png" width="100%"><span id="mailUnitName">上海美盟软件科技有限公司</span></span></p>
+        <p><span><img src="images/a19.png" width="100%"><span id="mailAddress">上海宝山区逸仙路8888弄100号505</span></span></p>
+        <p><span><img src="images/a20.png" width="100%">发货日期：<span id="mailTime">2018.10.11</span></span><span>预计到达：<span id="arriveTime"></span></span></p>
+    </div>
+    <div class="goods-mes">
+        <h2>货物信息</h2>
+        <span id="carrier">
+        </span>
+        <!-- div class="freight">
+            <h3>运费合计<span>¥6000.00</span></h3>
+            <p>投保额度<span>¥0.00</span></p>
+            <p>投保额度<span>¥0.00</span></p>
+        </div -->
+        <div class="freight">
+            <h3>付款总额<span>¥<span id="totalPayments"></span></span></h3>
+            <p class="bold">预付款<em id="prepayment">¥0.00</em></p>
+            <p>现金<em id="prepaymentCash">¥0.00</em></p>
+            <p>油卡<em id="prepaymentOilCard">¥0.00</em></p>
+            <p class="bold">回单付<em id="receiptMoney">¥0.00</em></p>
+            <p>现金<em id="receiptCash">¥0.00</em></p>
+            <p>油卡<em id="receiptOilCard">¥0.00</em></p>
+            <!-- p>到付<em id="fadPayment">¥0.00</em></p -->
+        </div>
+
+    </div>
+    <div class="detail-mes">
+        <h3>承运信息</h3>
+        <p><span><img src="images/a22.png" width="100%">车牌：<span id="plateNumber">沪A 17120</span></span><span><img src="images/a2.png" width="100%"><span id="driverTel">18714971712</span></span>
+        </p>
+        <p><span><img src="images/a1.png" width="100%"><span id="driverName">张萌</span></span><span>身份证：<span id="driverCard">340702199608082055</span></span></p>
+        <p><span><img src="images/a23.png" width="100%"><span id="carriageCompany">上海美萌运输服务有限公司</span></span></p>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/util/async-request.js"></script>
+<script>
+	
+	function formatDateTime(inputTime) {    
+    var date = new Date(inputTime);  
+    var y = date.getFullYear();    
+    var m = date.getMonth() + 1;    
+    m = m < 10 ? ('0' + m) : m;    
+    var d = date.getDate();    
+    d = d < 10 ? ('0' + d) : d;    
+    var h = date.getHours();  
+    h = h < 10 ? ('0' + h) : h;  
+    var minute = date.getMinutes();  
+    var second = date.getSeconds();  
+    minute = minute < 10 ? ('0' + minute) : minute;    
+    second = second < 10 ? ('0' + second) : second;   
+    return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second;    
+};  
+
+	var shipment = JSON.parse(localStorage.getItem("lastQueryResult"));
+	var order = shipment.data.shipment;
+	var references = order.references;
+	var addresses = order.addresses;
+	var lines = order.lines;
+	//alert(JSON.stringify(shipment.data.shipment));
+	$("#orderNo").html(order.number);
+	//alert(2);
+	$("#createTime").html(formatDateTime(order.submitDate));
+	
+	var htm = '';
+	for(var i=0;i<lines.length;i++){
+		htm += "<div class=\"mes-part1\">\r\n" + 
+			"            <p>"+lines[i].references[0].value+"</p>\r\n";
+			
+		
+		//alert(typeof(lines[i].lineVolume) == 'undefined');
+		//alert("Weight："+lines[i].lineWeight);
+		
+		if(typeof(lines[i].lineVolume) != 'undefined'){
+			htm +="            <p>"+lines[i].lineVolume+"立方毫米";
+		}else if(typeof(lines[i].lineWeight) != 'undefined'){
+			htm +="            <p>"+lines[i].lineWeight+"克";
+		}else if(typeof(lines[i].number) != 'undefined'){
+			htm +="            <p>"+lines[i].number+"件";
+		}
+		htm +="<span>运费单价：¥"+lines[i].references[1].value+"</span></p>";
+	}
+	$("#carrier").html(htm);
+	
+	for(var i=0;i<addresses.length;i++){
+		if(addresses[i].kind.value == "Receiver"){
+			$("#recPerson").html(addresses[i].name1);
+			$("#recTel").html(addresses[i].phone);
+			$("#recUnitName").html(addresses[i].name2);	
+			$("#recAddress").html(addresses[i].state+addresses[i].city+addresses[i].street1);	
+		}
+		if(addresses[i].kind.value == "PickUp"){
+			$("#carriageCompany").html(order.carrierName);
+			$("#driverName").html(addresses[i].name1);
+			$("#driverTel").html(addresses[i].mobile);
+			$("#driverCard").html(addresses[i].attention);
+			$("#plateNumber").html(addresses[i].name2);
+		}
+		if(addresses[i].kind.value == "Sender"){
+			$("#mailPerson").html(addresses[i].name1);
+			$("#mailTel").html(addresses[i].phone);
+			$("#mailUnitName").html(addresses[i].name2);	
+			$("#mailAddress").html(addresses[i].state+addresses[i].city+addresses[i].street1);	
+		}
+	}
+	$("#mailTime").html(formatDateTime(order.pickupDate));
+	var prepayment = 0;
+	var receiptMoney = 0;
+	for(var i=0;i<references.length;i++){
+		if(references[i].kind == 7){
+			$("#recMode").html(references[i].value);
+		}
+		if(references[i].kind == 242){
+			$("#receipt").html(references[i].value);
+		}
+		if(references[i].kind == 243){
+			$("#arriveTime").html(references[i].value);
+		}
+		if(references[i].kind == 241){
+			$("#totalPayments").html(references[i].value);
+		}
+		if(references[i].kind == 98){
+			prepayment += parseFloat(references[i].value);
+			$("#prepaymentCash").html("¥"+references[i].value);
+		}
+		if(references[i].kind == 99){
+			prepayment += parseFloat(references[i].value);
+			$("#prepaymentOilCard").html("¥"+references[i].value);
+		}
+		if(references[i].kind == 100){
+			receiptMoney +=parseFloat(references[i].value);
+			$("#receiptCash").html("¥"+references[i].value);
+		}
+		if(references[i].kind == 101){
+			receiptMoney +=parseFloat(references[i].value);
+			$("#receiptOilCard").html("¥"+references[i].value);
+		}
+		if(references[i].kind == 240){
+			$("#fadPayment").html("¥"+references[i].value);
+		}
+	}
+	
+	$("#prepayment").html("¥"+prepayment.toFixed(2));
+	$("#receiptMoney").html("¥"+receiptMoney.toFixed(2));
+</script>
+</html>

@@ -1,0 +1,27 @@
+22:09:38.009 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - ==>  Preparing: SELECT id,role_code,role_name,role_type,is_enable,updated_at,created_at,created_role,created_user FROM sys_role 
+22:09:38.051 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - ==> Parameters: 
+22:09:38.170 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - <==      Total: 4
+22:09:38.173 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+22:09:38.178 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 1(Integer)
+22:09:38.313 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 2
+22:09:38.325 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+22:09:38.326 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 5(Integer)
+22:09:38.329 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 1
+22:09:38.331 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+22:09:38.331 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 6(Integer)
+22:09:38.332 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 0
+22:09:38.335 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+22:09:38.335 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 7(Integer)
+22:09:38.337 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 0
+22:09:38.508 DEBUG c.w.c.s.m.S.selectByExample - ==>  Preparing: SELECT id,resource_name,resource_url,query_string,updated_at,created_at FROM sys_resource 
+22:09:38.508 DEBUG c.w.c.s.m.S.selectByExample - ==> Parameters: 
+22:09:38.530 DEBUG c.w.c.s.m.S.selectByExample - <==      Total: 22
+22:09:38.675 DEBUG c.w.c.s.m.D.selectAll - ==>  Preparing: SELECT id,dict_name,description FROM data_dictionary 
+22:09:38.675 DEBUG c.w.c.s.m.D.selectAll - ==> Parameters: 
+22:09:38.688 DEBUG c.w.c.s.m.D.selectAll - <==      Total: 20
+22:09:38.883 DEBUG c.w.c.w.m.W.selectForDataRole - ==>  Preparing: SELECT id,nick_name FROM wechat_mps 
+22:09:38.884 DEBUG c.w.c.w.m.W.selectForDataRole - ==> Parameters: 
+22:09:38.962 DEBUG c.w.c.w.m.W.selectForDataRole - <==      Total: 2
+22:09:39.011 DEBUG c.w.c.s.m.S.selectOne - ==>  Preparing: SELECT id,config_name,config_value,config_type FROM simple_config WHERE config_name = ? 
+22:09:39.012 DEBUG c.w.c.s.m.S.selectOne - ==> Parameters: jwt-secret(String)
+22:09:39.053 DEBUG c.w.c.s.m.S.selectOne - <==      Total: 1

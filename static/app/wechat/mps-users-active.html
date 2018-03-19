@@ -1,0 +1,76 @@
+<div id="modals">
+
+<!--modals-->
+</div>
+<div class="row">
+    <div class="top-handle-btn">
+        <!--search-form-->
+
+        <!--顶部提示信息-->
+        <div class="note note-success">
+            <p> 活跃粉丝定义为 <span style="color: red">48小时内 </span>与公众号互动的粉丝 </p>
+        </div>
+
+        <form id="search-form" action="javascript:;">
+            <select name="mpid" class=" input-medium form-control inline " >
+                <option value="">-- 请选择要查询的公众号 --</option>
+            </select>
+            <button class="btn purple right search radius6"><i class="fa fa-search"></i> 查询</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="row">
+
+    <!--main-content-->
+    <table id="data-table" class="table table-striped table-bordered table-hover" width="100%">
+        <thead>
+        <tr>
+            <th>微信openid</th>
+        </tr>
+       </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+
+<!--table-data-loader-->
+<script type="text/javascript">
+    var resourceUrl = "/wechat-user/active";
+    $(function () {
+        DataTable.init({
+            url: resourceUrl, //ajax请求url
+            tableName: "data-table", //数据表table id
+            paramsFormName: "search-form", //查询参数form id
+            modal: "modals", //模态框div
+            columns: [ //列对应的字段数组，注意顺序
+                {
+                    data: "openid"
+                },
+
+            ],
+
+        });
+
+        $("select").select2();
+        loadMps()
+    });
+
+
+    function loadMps(){
+        Shinez.get("/mps",function (ret) {
+            if(ret.code==0){
+                var mps = ret.data.page.list;
+                $.each(mps,function (k,v) {
+                    debugger
+                    $("*select[name=mpid]").append("<option value='"+v.id+"'>"+v.nickName+"</option>");
+                })
+            }
+        })
+    }
+
+
+</script>

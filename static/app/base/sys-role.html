@@ -1,0 +1,252 @@
+<div class="row">
+    <div class="top-handle-btn">
+        <form id="search-form" action="javascript:;">
+            <a class='btn green radius6' data-toggle='modal' href='#modal-add'><i class="fa fa-plus"></i> 添加</a>
+            <button class="btn purple right search radius6" style="display: none"><i class="fa fa-search"></i> 查询
+            </button>
+        </form>
+    </div>
+</div>
+
+
+<div id="modals">
+    <div class="modal fade" id="modal-role-edit" tabindex="-1" role="basic" aria-hidden="true">
+        <div class="modal-dialog" style="width: 350px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">分配角色菜单</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:;" method="post">
+                        <input type="hidden" name="id" value=""/>
+                        <div class="content_wrap">
+                            <ul id="ztree" class="ztree"></ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn dark green btn-save radius6"><i class="fa fa-save"></i> 保存修改
+                    </button>
+                    <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                            class="fa fa-close"></i> 关闭
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-add" tabindex="-1" role="basic" aria-hidden="true">
+        <div class="modal-dialog" style="width: 400px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">添加角色</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:;" method="post">
+                        <table class="table table-striped table-bordered " width="100%">
+                            <tr>
+                                <th>角色名称</th>
+                                <td>
+                                    <input type="text"class=" input-medium form-control inline " name="roleName" maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>角色编号</th>
+                                <td>
+                                    <input type="text"class=" input-medium form-control inline " name="roleCode" maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn dark green btn-save radius6"><i class="fa fa-save"></i> 添加</button>
+                    <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                            class="fa fa-close"></i> 关闭
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-edit" tabindex="-1" role="basic" aria-hidden="true">
+        <div class="modal-dialog"style="width: 400px;">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">修改角色</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:;" method="post">
+                        <input type="hidden" name="id" value=""/>
+                        <table class="table table-striped table-bordered " >
+                            <tr>
+                                <th>角色名称</th>
+                                <td>
+                                    <input type="text" class=" input-medium form-control inline "name="roleName" maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>角色编号</th>
+                                <td>
+                                    <input type="text" class=" input-medium form-control inline "name="roleCode" disabled readonly maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn dark green btn-save radius6"><i class="fa fa-check"></i> 保存
+                    </button>
+                    <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                            class="fa fa-close"></i> 关闭
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-img-view" tabindex="-1" role="basic" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">预览</h4>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <img src="" alt="" width="220px;"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn dark btn-outline" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</div>
+
+<div class="row">
+    <table id="data-table" class="table table-striped table-bordered table-hover" width="100%">
+        <thead>
+        <tr>
+            <th>角色名称</th>
+            <th>角色编号</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+<script type="text/javascript">
+    var resource = "/main/sys-role";
+    $(function () {
+        DataTable.init({
+            url: resource,//ajax请求url
+            tableName: "data-table",//数据表table id
+            paramsFormName: "search-form",//查询参数form id
+            modal: "modals",//模态框div
+            columns: [//列对应的字段数组，注意顺序
+                {data: "roleName"},
+                {data: "roleCode",},
+            ],
+            options: [//操作区域(id)
+                {
+                    title: "修改名称",
+                    icon: "fa fa-edit",
+                    option: "modal-edit",
+                    edit: true,
+                    editMain: true,
+                    url: resource,
+                },
+                {
+                    title: "编辑权限菜单",
+                    icon: "fa fa-list-alt",
+                    option: "modal-role-edit",
+                    pre: "loadRoleById",
+                    edit: true,
+                    submit: "save"
+                },
+                {
+                    icon: "fa fa-remove",
+                    name: "删除",
+                    del: resource,
+                },
+            ],
+            handles: {
+                insert: [
+                    {url: resource, modalId: "modal-add"},
+                ],
+            },
+        });
+
+    });
+
+    function save() {
+        var treeObj = $.fn.zTree.getZTreeObj("ztree");
+        var changeNodes = treeObj.getChangeCheckedNodes();
+        var roleId = $("#modal-role-edit").find("[name=id]").val();
+        if (changeNodes.length <= 0||roleId==null||roleId=="") {
+            Shinez.tip("warning","没有做任何更改");
+            $("#modal-role-edit").modal('hide');
+            return;
+        }
+        var nodesStr = "";
+        for (var i = 0; i < changeNodes.length; ++i) {
+            nodesStr += "nodes[" + i + "].id=" + changeNodes[i].id + "&nodes[" + i + "].checked=" + changeNodes[i].checked + "&";
+        }
+        Shinez.put("/main/sys-role/"+roleId+"/menus",nodesStr,function (ret) {
+            if(ret.code==0){
+                Shinez.tip("success","权限分配成功,对应角色的用户下次登陆生效");
+                $("#modal-role-edit").modal('hide');
+            }else{
+                Shinez.tip("error",ret.msg);
+            }
+        });
+
+//        postJSON("${request.contextPath}/updateRoleMenus", nodesStr + "roleId=" + $("#roleId").val(), function (ret) {
+//            for (i = 0; i < changeNodes.length; ++i) {
+//                changeNodes[i].checkedOld = changeNodes[i].checked;
+//            }
+//            Shinez.tip("success", "权限变更成功，将在对应角色下次登陆后生效");
+//            $("#edit-modal").modal("hide");
+//        });
+    }
+
+    function loadRoleById(obj) {
+        Shinez.get("/main/sys-role/" + obj + "/menus", {roleId: obj}, function (ret) {
+            if (ret.code == 0) {
+                var menusData = ret.data.menusData;
+                var setting = {
+                    check: {
+                        enable: true,
+                        chkboxType: {"Y": "ps", "N": "s"}
+                    },
+                    data: {
+                        simpleData: {
+                            enable: true
+                        }
+                    }
+                };
+                $.fn.zTree.init($("#ztree"), setting, menusData);
+            } else {
+                Shinez.tip("error", ret.msg);
+            }
+        });
+    }
+</script>

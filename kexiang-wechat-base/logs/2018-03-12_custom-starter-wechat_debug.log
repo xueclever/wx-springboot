@@ -1,0 +1,580 @@
+01:13:17.498 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+01:13:17.530 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+01:13:17.561 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+01:13:18.635 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==>  Preparing: SELECT id,appid,openid,subscribe,subscribe_time,remark,nickname,sex,province,city,country,headimgurl,privilege,unionid,groupid,targid_list FROM wechat_user WHERE openid = ? 
+01:13:18.635 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==> Parameters: oEzFE1Js1cHIzFmyKYOUFV7VMeyw(String)
+01:13:18.842 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - <==      Total: 1
+01:13:18.844 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==>  Preparing: UPDATE wechat_user SET appid = ?,openid = ?,nickname = ?,sex = ?,province = ?,city = ?,country = ?,headimgurl = ?,privilege = ?,unionid = ? WHERE id = ? 
+01:13:18.844 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==> Parameters: wx1d09d50315914f53(String), oEzFE1Js1cHIzFmyKYOUFV7VMeyw(String), 廖雪冰(String), true(Boolean), 湖南(String), 长沙(String), 中国(String), http://thirdwx.qlogo.cn/mmopen/vi_32/vOWp3j5psrNnD8oZib3OXSV0gVx4nBSFCiagKic42d3GSFrWbmm6BQJJMXTY9zBKqn3E02eiaG4XIqiaYJQ7977504w/132(String), [](String), olw6b0QlzIjAWFKQdeC9YuQofC7s(String), 1(Integer)
+01:13:18.941 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - <==    Updates: 1
+01:19:27.766 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:19:27.766 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:19:27.793 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:19:27.795 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:19:27.795 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:19:27.796 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:19:27.798 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:19:27.798 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:19:27.799 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:19:27.801 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:19:27.802 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:19:27.803 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:19:27.806 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:19:27.806 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:19:27.810 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:19:27.811 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:19:27.812 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:19:27.813 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:19:27.864 DEBUG c.w.k.w.m.O.insertSelective - ==>  Preparing: INSERT INTO orderm ( id,rec_person,openid,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt ) VALUES( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ) 
+01:19:27.866 DEBUG c.w.k.w.m.O.insertSelective - ==> Parameters: null, 收件人1(String), oEzFE1Js1cHIzFmyKYOUFV7VMeyw(String), 0(Integer), 2018-03-12 01:19:27.827(Timestamp), 151445545(String), 美萌(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 假装详细地址(String), 1(Integer), 发件人1(String), 5154511235(String), 美萌1(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 假装详细地址(String), 2018-01-02 00:00:00.0(Timestamp), 2018-03-01 00:00:00.0(Timestamp), 1(Integer)
+01:19:27.976 DEBUG c.w.k.w.m.O.insertSelective - <==    Updates: 1
+01:19:27.979 DEBUG c.w.k.w.m.O.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+01:19:27.980 DEBUG c.w.k.w.m.O.insertSelective!selectKey - <==      Total: 1
+01:21:28.798 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+01:21:28.799 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 1(Integer)
+01:21:28.926 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 2
+01:21:28.930 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+01:21:28.931 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 1(Integer), 货物1(String), 1(Integer), 1(Integer), 12.34(BigDecimal)
+01:21:29.009 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+01:21:29.010 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+01:21:29.010 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+01:21:29.012 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+01:21:29.012 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 1(Integer), 货物2(String), 1(Integer), 1(Integer), 14.34(BigDecimal)
+01:21:29.044 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+01:21:29.046 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+01:21:29.046 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+01:21:29.048 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+01:21:29.049 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 46.23(BigDecimal), 23(BigDecimal), 23.52(BigDecimal), 1(Integer)
+01:21:29.103 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:21:41.783 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+01:21:41.784 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 26(Integer)
+01:21:41.784 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+01:21:41.786 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+01:21:41.788 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 26(Integer), 货物1(String), 1(Integer), 1(Integer), 12.34(BigDecimal)
+01:21:41.818 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+01:21:41.819 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+01:21:41.820 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+01:21:41.823 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+01:21:41.824 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 26(Integer), 货物2(String), 1(Integer), 1(Integer), 14.34(BigDecimal)
+01:21:41.859 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+01:21:41.859 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+01:21:41.860 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+01:21:41.861 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+01:21:41.862 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 46.23(BigDecimal), 23(BigDecimal), 23.52(BigDecimal), 26(Integer)
+01:21:41.967 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:27:23.680 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:27:23.741 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 20180312012719UW88FL(String), 26(Integer)
+01:27:23.818 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:27:24.484 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:27:24.493 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:27:24.718 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:27:31.355 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:27:31.356 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:27:31.374 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:29:50.834 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:29:50.835 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 20180312012948KN24J5(String), 26(Integer)
+01:29:50.876 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:29:50.879 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:29:50.879 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:29:50.883 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:29:50.885 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:29:50.886 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:29:50.887 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:35:06.534 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:35:06.536 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 201803120135035X6227(String), 26(Integer)
+01:35:06.568 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:35:06.569 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:35:06.570 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:35:06.585 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:35:06.587 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:35:06.587 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:35:06.588 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:35:38.745 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:35:38.746 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 201803120135355G8N3R(String), 26(Integer)
+01:35:38.774 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:35:38.775 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:35:38.775 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:35:38.777 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:35:38.779 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:35:38.779 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:35:38.780 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:36:51.628 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:36:51.629 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 20180312013647Q7B3V7(String), 26(Integer)
+01:36:51.662 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:36:51.663 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:36:51.664 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:36:51.669 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:36:51.672 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:36:51.672 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:36:51.673 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:41:58.643 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:41:58.646 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:41:58.648 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:41:58.655 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:41:58.656 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:41:58.657 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:43:10.144 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:43:10.164 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:43:10.245 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:43:10.271 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:43:10.272 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:43:10.325 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:44:10.220 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:44:10.221 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:44:10.223 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:44:10.225 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:44:10.225 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:44:10.226 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:44:36.040 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:44:36.041 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:44:36.043 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:44:36.044 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:44:36.045 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:44:36.045 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:44:50.948 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:44:50.949 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:44:50.953 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:44:50.955 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:44:50.955 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:44:50.956 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:45:17.621 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:45:17.622 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:45:17.630 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:45:17.631 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:45:17.632 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:45:17.632 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:45:47.794 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:45:47.795 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610606(String), 26(Integer)
+01:45:47.833 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:50:31.909 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:50:31.910 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:50:31.913 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:50:31.916 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:50:31.916 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:50:31.921 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:50:34.513 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:50:34.514 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610637(String), 26(Integer)
+01:50:34.543 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:50:50.315 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:50:50.316 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:50:50.317 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:50:50.320 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:50:50.321 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:50:50.323 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:50:52.906 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:50:52.907 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610668(String), 26(Integer)
+01:50:52.934 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:51:24.186 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+01:51:24.187 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+01:51:24.189 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+01:51:24.192 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+01:51:24.193 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+01:51:24.196 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+01:51:26.669 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+01:51:26.669 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610699(String), 26(Integer)
+01:51:26.734 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+01:52:59.300 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:52:59.301 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:52:59.327 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:52:59.328 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:52:59.329 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:52:59.329 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:52:59.330 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:52:59.331 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:52:59.331 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:52:59.332 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:52:59.332 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:52:59.333 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:52:59.334 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:52:59.335 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:52:59.335 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:52:59.336 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+01:52:59.336 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+01:52:59.337 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+01:52:59.342 DEBUG c.w.k.w.m.O.insertSelective - ==>  Preparing: INSERT INTO orderm ( id,rec_person,openid,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt ) VALUES( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ) 
+01:52:59.344 DEBUG c.w.k.w.m.O.insertSelective - ==> Parameters: null, 收件人1(String), oEzFE1Js1cHIzFmyKYOUFV7VMeyw(String), 0(Integer), 2018-03-12 01:52:59.338(Timestamp), 151445545(String), 美萌(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 假装详细地址(String), 1(Integer), 发件人1(String), 5154511235(String), 美萌1(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 假装详细地址(String), 2018-01-02 00:00:00.0(Timestamp), 2018-03-01 00:00:00.0(Timestamp), 1(Integer)
+01:52:59.377 DEBUG c.w.k.w.m.O.insertSelective - <==    Updates: 1
+01:52:59.382 DEBUG c.w.k.w.m.O.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+01:52:59.385 DEBUG c.w.k.w.m.O.insertSelective!selectKey - <==      Total: 1
+01:53:10.880 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+01:53:10.880 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 27(Integer)
+01:53:10.882 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+01:53:23.838 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+01:53:23.838 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 27(Integer)
+01:53:23.839 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+01:56:36.579 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+01:56:36.580 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 27(Integer)
+01:56:36.581 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+02:03:14.434 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+02:03:14.435 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 27(Integer)
+02:03:14.436 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+02:03:14.438 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+02:03:14.439 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 27(Integer), 货物1(String), 10(Integer), 2(Integer), 12.34(BigDecimal)
+02:03:14.486 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+02:03:14.487 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+02:03:14.487 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+02:03:14.488 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+02:03:14.489 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 27(Integer), 货物2(String), 1(Integer), 1(Integer), 14.34(BigDecimal)
+02:03:14.518 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+02:03:14.518 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+02:03:14.519 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+02:03:14.520 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+02:03:14.521 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 27(Integer), 货物3(String), 20(Integer), 3(Integer), 14.34(BigDecimal)
+02:03:14.544 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+02:03:14.545 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+02:03:14.545 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+02:03:14.547 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+02:03:14.548 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 46.23(BigDecimal), 23(BigDecimal), 23.52(BigDecimal), 27(Integer)
+02:03:14.576 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:04:17.447 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:04:17.447 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 27(Integer)
+02:04:17.449 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:04:17.451 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:04:17.451 DEBUG c.w.k.w.m.C.select - ==> Parameters: 27(Integer)
+02:04:17.451 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:04:59.882 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:04:59.884 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 27(Integer)
+02:04:59.885 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:04:59.887 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:04:59.888 DEBUG c.w.k.w.m.C.select - ==> Parameters: 27(Integer)
+02:04:59.890 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:07:37.644 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:07:37.645 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 27(Integer)
+02:07:37.646 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:07:37.648 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:07:37.648 DEBUG c.w.k.w.m.C.select - ==> Parameters: 27(Integer)
+02:07:37.649 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:08:05.676 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+02:08:05.676 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+02:08:05.677 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+02:08:05.680 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+02:08:05.680 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+02:08:05.681 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+02:08:05.682 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+02:08:05.683 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+02:08:05.683 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+02:08:05.685 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+02:08:05.685 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+02:08:05.686 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+02:08:05.687 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+02:08:05.687 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+02:08:05.688 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+02:08:05.689 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+02:08:05.689 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+02:08:05.690 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+02:08:05.693 DEBUG c.w.k.w.m.O.insertSelective - ==>  Preparing: INSERT INTO orderm ( id,rec_person,openid,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt ) VALUES( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ) 
+02:08:05.694 DEBUG c.w.k.w.m.O.insertSelective - ==> Parameters: null, 收件人1(String), oEzFE1Js1cHIzFmyKYOUFV7VMeyw(String), 0(Integer), 2018-03-12 02:08:05.691(Timestamp), 151445545(String), 美萌(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 假装详细地址(String), 1(Integer), 发件人1(String), 5154511235(String), 美萌1(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 假装详细地址(String), 2018-01-02 00:00:00.0(Timestamp), 2018-03-01 00:00:00.0(Timestamp), 1(Integer)
+02:08:05.746 DEBUG c.w.k.w.m.O.insertSelective - <==    Updates: 1
+02:08:05.749 DEBUG c.w.k.w.m.O.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+02:08:05.752 DEBUG c.w.k.w.m.O.insertSelective!selectKey - <==      Total: 1
+02:08:29.315 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+02:08:29.316 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 28(Integer)
+02:08:29.316 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+02:08:29.318 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+02:08:29.318 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 28(Integer), 货物1(String), 10(Integer), 2(Integer), 12.34(BigDecimal)
+02:08:29.369 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+02:08:29.370 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+02:08:29.370 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+02:08:29.371 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+02:08:29.372 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 28(Integer), 货物2(String), 1(Integer), 1(Integer), 14.34(BigDecimal)
+02:08:29.419 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+02:08:29.419 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+02:08:29.420 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+02:08:29.421 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+02:08:29.421 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 28(Integer), 货物3(String), 20(Integer), 3(Integer), 14.34(BigDecimal)
+02:08:29.477 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+02:08:29.478 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+02:08:29.478 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+02:08:29.479 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+02:08:29.479 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 46.23(BigDecimal), 23(BigDecimal), 23.52(BigDecimal), 28(Integer)
+02:08:29.536 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:08:52.999 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:08:52.999 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:08:53.000 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:08:53.002 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:08:53.002 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:08:53.003 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:09:50.518 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:09:50.524 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:09:50.565 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:09:50.567 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:09:50.567 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:09:50.569 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:09:50.570 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:09:50.570 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:09:50.571 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:10:10.578 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:10:10.578 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:10:10.608 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:10:10.610 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:10:10.611 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:10:10.612 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:10:10.614 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:10:10.614 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:10:10.615 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:12:09.763 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:12:09.764 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:12:09.799 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:12:09.800 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:12:09.801 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:12:09.802 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:12:09.803 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:12:09.804 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:12:09.804 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:12:31.619 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:12:31.619 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:12:31.648 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:12:31.652 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:12:31.652 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:12:31.659 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:12:31.661 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:12:31.661 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:12:31.662 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:12:47.168 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:12:47.168 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:12:47.197 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:12:47.199 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:12:47.199 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:12:47.201 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:12:47.203 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:12:47.203 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:12:47.204 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:13:23.489 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:13:23.489 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:13:23.520 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:13:23.522 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:13:23.522 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:13:23.523 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:13:23.524 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:13:23.524 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:13:23.525 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:16:04.423 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:16:04.423 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:16:04.478 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:16:04.480 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:16:04.480 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:16:04.481 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:16:04.483 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:16:04.483 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:16:04.483 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:16:56.574 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:16:56.576 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 26(Integer)
+02:16:56.609 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:16:56.611 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:16:56.611 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+02:16:56.616 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:16:56.617 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:16:56.617 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+02:16:56.618 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+02:16:59.026 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+02:16:59.026 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610729(String), 26(Integer)
+02:16:59.084 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:17:11.101 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:17:11.102 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:17:11.125 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:17:11.127 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:17:11.128 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:17:11.133 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:17:11.137 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:17:11.138 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:17:11.138 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:18:14.866 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:18:14.867 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:18:14.905 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:18:14.906 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:18:14.906 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:18:14.908 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:18:14.909 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:18:14.909 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:18:14.910 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:18:34.466 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:18:34.477 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 26(Integer)
+02:18:34.521 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:18:34.523 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:18:34.524 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 26(Integer)
+02:18:34.525 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:18:34.527 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:18:34.528 DEBUG c.w.k.w.m.C.select - ==> Parameters: 26(Integer)
+02:18:34.530 DEBUG c.w.k.w.m.C.select - <==      Total: 2
+02:18:42.449 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+02:18:42.450 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610750(String), 26(Integer)
+02:18:42.478 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:53:27.717 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:53:27.717 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:53:27.751 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:53:27.752 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:53:27.753 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:53:27.754 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:53:27.755 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:53:27.756 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:53:27.756 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:55:15.767 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:55:15.769 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:55:15.804 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:55:15.806 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:55:15.806 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:55:15.808 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:55:15.811 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:55:15.811 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:55:15.813 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:58:14.575 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:58:14.598 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:58:14.703 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:58:14.715 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:58:14.716 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:58:14.764 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:58:14.767 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:58:14.767 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:58:14.780 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+02:58:39.867 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+02:58:39.869 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+02:58:39.909 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+02:58:39.911 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+02:58:39.911 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+02:58:39.913 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+02:58:39.915 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+02:58:39.915 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+02:58:39.916 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:01:47.808 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:01:47.809 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 28(Integer)
+03:01:47.841 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:01:47.842 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:01:47.843 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 28(Integer)
+03:01:47.844 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:01:47.846 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:01:47.846 DEBUG c.w.k.w.m.C.select - ==> Parameters: 28(Integer)
+03:01:47.847 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:01:52.767 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+03:01:52.769 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610781(String), 28(Integer)
+03:01:52.799 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:02:27.907 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+03:02:27.907 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+03:02:27.935 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+03:02:27.936 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+03:02:27.937 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+03:02:27.939 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+03:02:27.941 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+03:02:27.941 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+03:02:27.942 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+03:02:27.945 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+03:02:27.945 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+03:02:27.947 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+03:02:27.949 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+03:02:27.949 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+03:02:27.950 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+03:02:27.952 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+03:02:27.954 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 10(Integer)
+03:02:27.955 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+03:02:27.960 DEBUG c.w.k.w.m.O.insertSelective - ==>  Preparing: INSERT INTO orderm ( id,rec_person,openid,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt ) VALUES( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ) 
+03:02:27.962 DEBUG c.w.k.w.m.O.insertSelective - ==> Parameters: null, 收件人1(String), oEzFE1Js1cHIzFmyKYOUFV7VMeyw(String), 0(Integer), 2018-03-12 03:02:27.956(Timestamp), 151445545(String), 美萌(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 假装详细地址(String), 1(Integer), 发件人1(String), 5154511235(String), 美萌1(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 10(Integer), 北京(String), 假装详细地址(String), 2018-04-20 00:00:00.0(Timestamp), 2018-04-16 00:00:00.0(Timestamp), 1(Integer)
+03:02:27.998 DEBUG c.w.k.w.m.O.insertSelective - <==    Updates: 1
+03:02:28.001 DEBUG c.w.k.w.m.O.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+03:02:28.002 DEBUG c.w.k.w.m.O.insertSelective!selectKey - <==      Total: 1
+03:02:42.960 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+03:02:42.961 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 29(Integer)
+03:02:42.962 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+03:02:42.964 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+03:02:42.965 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 29(Integer), 货物1(String), 10(Integer), 2(Integer), 12.34(BigDecimal)
+03:02:43.013 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+03:02:43.014 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+03:02:43.014 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+03:02:43.016 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+03:02:43.016 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 29(Integer), 货物2(String), 1(Integer), 1(Integer), 14.34(BigDecimal)
+03:02:43.045 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+03:02:43.046 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+03:02:43.047 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+03:02:43.049 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+03:02:43.049 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 29(Integer), 货物3(String), 20(Integer), 3(Integer), 14.34(BigDecimal)
+03:02:43.096 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+03:02:43.097 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+03:02:43.098 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+03:02:43.100 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+03:02:43.101 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 46.23(BigDecimal), 23(BigDecimal), 23.52(BigDecimal), 29(Integer)
+03:02:43.128 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:02:57.167 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:02:57.169 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:02:57.204 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:02:57.206 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:02:57.207 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:02:57.211 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:02:57.219 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:02:57.220 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:02:57.221 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:03:02.825 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+03:03:02.826 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610828(String), 29(Integer)
+03:03:02.888 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:03:45.211 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:03:45.212 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:03:45.243 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:03:45.246 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:03:45.246 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:03:45.252 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:03:45.258 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:03:45.259 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:03:45.260 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:10:29.217 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:10:29.219 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:10:29.255 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:10:29.257 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:10:29.257 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:10:29.260 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:10:29.262 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:10:29.262 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:10:29.264 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:10:29.840 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ?,orderNo = ? WHERE id = ? 
+03:10:29.841 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 40170716480006610903(String), 29(Integer)
+03:10:29.864 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:13:15.875 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:13:15.876 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:13:15.913 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:13:15.915 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:13:15.915 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:13:15.940 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:13:15.941 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:13:15.942 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:13:15.942 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:13:28.672 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:13:28.673 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:13:28.703 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:13:28.705 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:13:28.706 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:13:28.708 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:13:28.712 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:13:28.712 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:13:28.713 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:16:29.662 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:16:29.666 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:16:29.744 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:16:29.745 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:16:29.746 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:16:29.747 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:16:29.749 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:16:29.749 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:16:29.749 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:17:12.455 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:17:12.474 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:17:12.593 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:17:12.605 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:17:12.606 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:17:12.632 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:17:12.635 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:17:12.636 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:17:12.647 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:18:08.157 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:18:08.158 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:18:08.197 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:18:08.199 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:18:08.200 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:18:08.202 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:18:08.203 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:18:08.204 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:18:08.205 DEBUG c.w.k.w.m.C.select - <==      Total: 3
+03:29:59.482 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+03:29:59.503 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3737(Integer), 23.23(BigDecimal), 23.11(BigDecimal), 28.22(BigDecimal), 23.42(BigDecimal), 23.23(BigDecimal), 13.56(BigDecimal), 56.22(BigDecimal), 12.42(BigDecimal), 52.11(BigDecimal), 23.74(BigDecimal), 56.23(BigDecimal), 德皇物流(String), CTB_name(String), 1517313926(String), 5465464644565464(String), 鲁H234(String), 29(Integer)
+03:29:59.617 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+03:29:59.632 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+03:29:59.632 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 29(Integer)
+03:29:59.732 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+03:29:59.738 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+03:29:59.739 DEBUG c.w.k.w.m.C.select - ==> Parameters: 29(Integer)
+03:29:59.777 DEBUG c.w.k.w.m.C.select - <==      Total: 3

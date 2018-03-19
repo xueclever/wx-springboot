@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wmeimob.custom.system.mapper.SysRoleMapper" >
+  <!--<resultMap id="BaseResultMap" type="com.wmeimob.custom.system.entity.SysRole" >-->
+    <!--&lt;!&ndash;-->
+      <!--WARNING - @mbg.generated-->
+    <!--&ndash;&gt;-->
+    <!--<id column="id" property="id" jdbcType="INTEGER" />-->
+    <!--<result column="mpid" property="mpid" jdbcType="INTEGER" />-->
+    <!--<result column="role_code" property="roleCode" jdbcType="VARCHAR" />-->
+    <!--<result column="role_name" property="roleName" jdbcType="VARCHAR" />-->
+    <!--<result column="role_type" property="roleType" jdbcType="INTEGER" />-->
+    <!--<result column="is_enable" property="isEnable" jdbcType="BIT" />-->
+    <!--<result column="updated_at" property="updatedAt" jdbcType="TIMESTAMP" />-->
+    <!--<result column="created_at" property="createdAt" jdbcType="TIMESTAMP" />-->
+  <!--</resultMap>-->
+</mapper>

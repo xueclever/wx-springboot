@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wmeimob.custom.system.mapper.SysMenuMapper">
+    <resultMap id="BaseResultMap" type="com.wmeimob.custom.system.entity.SysMenu">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="parent_id" property="parentId" jdbcType="INTEGER"/>
+        <result column="icon" property="icon" jdbcType="VARCHAR"/>
+        <result column="menu_code" property="menuCode" jdbcType="VARCHAR"/>
+        <result column="menu_name" property="menuName" jdbcType="VARCHAR"/>
+        <result column="menu_describe" property="menuDescribe" jdbcType="VARCHAR"/>
+        <result column="menu_href" property="menuHref" jdbcType="VARCHAR"/>
+        <result column="query_string" property="queryString" jdbcType="VARCHAR"/>
+        <result column="created_at" property="createdAt" jdbcType="TIMESTAMP"/>
+        <result column="updated_at" property="updatedAt" jdbcType="TIMESTAMP"/>
+        <result column="order_no" property="orderNo" jdbcType="INTEGER"/>
+
+        <result column="role_id" property="roleId" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <resultMap id="resultMapWithList" type="com.wmeimob.custom.system.entity.SysMenu" extends="BaseResultMap">
+        <collection property="sysMenus" ofType="com.wmeimob.custom.system.entity.SysMenu">
+            <id column="id1" property="id" jdbcType="INTEGER"/>
+            <result column="parent_id1" property="parentId" jdbcType="INTEGER"/>
+            <result column="icon1" property="icon" jdbcType="VARCHAR"/>
+            <result column="menu_code1" property="menuCode" jdbcType="VARCHAR"/>
+            <result column="menu_name1" property="menuName" jdbcType="VARCHAR"/>
+            <result column="menu_describe1" property="menuDescribe" jdbcType="VARCHAR"/>
+            <result column="menu_href1" property="menuHref" jdbcType="VARCHAR"/>
+            <result column="query_string1" property="queryString" jdbcType="VARCHAR"/>
+            <result column="created_at1" property="createdAt" jdbcType="TIMESTAMP"/>
+            <result column="updated_at1" property="updatedAt" jdbcType="TIMESTAMP"/>
+            <result column="order_no1" property="orderNo" jdbcType="INTEGER"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectMenus" resultMap="resultMapWithList">
+        SELECT
+        menu2.*,
+        menu.id id1,
+        menu.parent_id parent_id1,
+        menu.icon icon1,
+        menu.menu_code menu_code1,
+        menu.menu_name menu_name1,
+        menu.menu_describe menu_describe1,
+        menu.menu_href menu_href1,
+        menu.query_string query_string1,
+        menu.created_at created_at1,
+        menu.updated_at updated_at1,
+        menu.order_no order_no1
+        FROM
+        sys_menu menu
+        INNER JOIN sys_menu_role mr ON mr.menu_id = menu.id
+        LEFT JOIN sys_menu menu2 ON menu2.id = menu.parent_id
+        WHERE 1=1
+        AND mr.role_id = #{roleId}
+        AND menu.parent_id &lt;>0
+        AND menu2.parent_id=0
+        ORDER BY menu.order_no
+    </select>
+
+
+    <select id="selectMenusSimple" resultMap="BaseResultMap">
+        SELECT
+            f.*, r.role_id
+        FROM
+            `sys_menu` f
+          LEFT JOIN sys_menu_role r ON r.menu_id = f.id
+        AND r.role_id = #{roleId}
+        ORDER BY
+            f.order_no
+    </select>
+
+    <select id="selectChildrenMenusSimple" resultMap="BaseResultMap">
+            SELECT
+                m.*, mr.role_id
+            FROM
+                (
+                    SELECT
+                        m.*
+                    FROM
+                        `sys_menu` m
+                    INNER JOIN sys_menu_role mr ON mr.menu_id = m.id
+                    AND mr.role_id = #{superRoleId}
+                    ORDER BY
+                        m.order_no
+                ) m
+            LEFT JOIN sys_menu_role mr ON mr.menu_id = m.id
+            AND mr.role_id = #{roleId}
+            ORDER BY
+                m.order_no
+    </select>
+
+
+    <update id="updateList">
+        <foreach collection="list" item="map" index="index" open=" " separator=";" close=" ">
+            UPDATE sys_menu
+            SET parent_id = #{map.parentId}
+            ,order_no = #{map.orderNo}
+            WHERE id=#{map.id}
+        </foreach>
+    </update>
+</mapper>

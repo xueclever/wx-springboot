@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wmeimob.custom.wechat.mapper.WechatMchMapper" >
+  <resultMap id="BaseResultMap" type="com.wmeimob.custom.wechat.entity.WechatMch" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="mch_no" property="mchNo" jdbcType="VARCHAR" />
+    <result column="mch_key" property="mchKey" jdbcType="VARCHAR" />
+    <result column="p12_set_flag" property="p12SetFlag" jdbcType="BIT" />
+    <result column="p12" property="p12" jdbcType="LONGVARBINARY" />
+  </resultMap>
+
+  <select id="selectMchKeyByAppid" resultType="java.lang.String">
+    SELECT mch.mch_key FROM wechat_mch mch
+    INNER JOIN wechat_mps mps ON mps.mch_id = mch.id
+    WHERE mps.appid=#{appid}
+  </select>
+</mapper>

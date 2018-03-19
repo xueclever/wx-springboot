@@ -1,0 +1,421 @@
+<div class="row">
+    <div class="top-handle-btn">
+        <form id="search-form" action="javascript:;">
+            每页显示：<input name="pageSize" class="form-control  input-small inline" type="number" min="2" max="50" style="width: 80px;"  value="10" />
+            <input type="text " class="form-control input-small inline" name="username" placeholder="输入账号查询" />
+            <select name="roleId" class="form-control input-small inline">
+                <option value="">选择角色</option>
+            </select>
+            <button class="btn purple right search radius6"><i class="fa fa-search"></i> 查询</button>
+            <a class='btn green radius6' data-toggle='modal' href='#modal-add'><i class="fa fa-plus"></i> 添加</a>
+        </form>
+    </div>
+</div>
+
+
+<div id="modals">
+    <div class="modal fade" id="modal-add" role="basic" aria-hidden="true">
+        <div class="modal-dialog" style="width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">新增</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:;" method="post">
+                        <table class="table table-striped table-bordered ">
+                            <tr>
+                                <th>用户名</th>
+                                <td colspan="3">
+                                    <input class=" input-medium form-control inline " type="text" name="username" maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>用户昵称</th>
+                                <td colspan="3">
+                                    <input class=" input-medium form-control inline " type="text" name="nickname" maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="100">账号角色：</th>
+                                <td colspan="3">
+                                    <select class=" input-medium form-control inline " name="roleId">
+                                    </select>
+                                    <input type="hidden" name="roleName" data-ref="roleId" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>密码设置</th>
+                                <td colspan="3">
+                                    <input class=" input-medium form-control inline " type="pwd" name="pwd" maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>联系电话</th>
+                                <td colspan="3">
+                                    <input class=" input-medium form-control inline " type="text" name="tel" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>管理权限</th>
+                                <td colspan="3">
+                                    <input type="checkbox" name="isEnabled" data-size='small' value="1" />
+                                    <!--<label> <input type="radio" name="showStatus" value="false"/>开启 </label>-->
+                                    <!--<label><input type="radio" name="showStatus" value="true"/> 停用 </label>-->
+                                    <!--<input type="hidden" name="isBan" data-ref="showStatus" value=""/>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>数据权限：</th>
+                                <td colspan="3">
+                                    <input type="checkbox" name="enableDataRole" data-size='small' value="1" />
+                                    <!--<label><input type="radio" value="1" name="showEnableDataRole"/>开启</label>-->
+                                    <!--<label><input type="radio" value="0" checked name="showEnableDataRole"/>默认</label>-->
+                                    <!--<input type="hidden" name="enableDataRole" data-ref="showEnableDataRole" value="0"/>-->
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn dark green btn-save radius6"><i class="fa fa-save"></i> 添加</button>
+                    <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i class="fa fa-close"></i> 关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-edit" role="basic" aria-hidden="true">
+        <div class="modal-dialog" style="width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">编辑</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:;" method="post">
+                        <input type="hidden" name="id" value="" />
+                        <table class="table table-striped table-bordered ">
+                            <tr>
+                                <th>用户名</th>
+                                <td colspan="3">
+                                    <input class=" input-medium form-control inline " type="text" name="username" maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>昵称</th>
+                                <td colspan="3">
+                                    <input class=" input-medium form-control inline " type="text" name="nickname" maxlength="16" value="">
+                                    <span class="required-star">* </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="100">账号角色：</th>
+                                <td colspan="3">
+                                    <select class=" input-medium form-control inline " name="roleId">
+                                    </select>
+                                    <input type="hidden" name="roleName" data-ref="roleId" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>联系电话</th>
+                                <td colspan="3">
+                                    <input class=" input-medium form-control inline " type="text" name="tel" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>管理权限</th>
+                                <td colspan="3">
+                                    <!--<label> <input type="radio" name="showStatus" value="0"/>开启 </label>-->
+                                    <!--<label><input type="radio" name="showStatus" value="1"/> 停用 </label>-->
+                                    <!--<input type="hidden" name="isBan" data-ref="showStatus" value=""/>-->
+                                    <input type="checkbox" name="isEnabled" data-size='small' value="1" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>数据权限：</th>
+                                <td colspan="3">
+                                    <!--<label><input type="radio" value="1" name="showEnableDataRole"/>开启</label>-->
+                                    <!--<label><input type="radio" value="0" checked name="showEnableDataRole"/>默认</label>-->
+                                    <!--<input type="hidden" name="enableDataRole" data-ref="showEnableDataRole" value=""/>-->
+                                    <input type="checkbox" name="enableDataRole" data-size='small' value="1" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn dark green btn-save radius6"><i class="fa fa-check"></i> 保存</button>
+                    <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i class="fa fa-close"></i> 关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-img-view" tabindex="-1" role="basic" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title">预览</h4>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <img src="" alt="" width="220px;" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn dark btn-outline" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+    <!-- 重置密码 -->
+    <div class="modal fade" id="modal-reset-pwd" tabindex="-1" role="basic" aria-hidden="true">
+        <div class="modal-dialog" style="width: 400px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span
+                            class="sr-only">Close</span></button>
+                    <h4 class="modal-title">密码重置</h4>
+                </div>
+                <form id="pwdForm" action="javascript:;">
+                    <div class="modal-body">
+                        <input type="hidden" id="userId-pwd" name="id" value="" />
+                        <table class="table table-striped table-bordered table-hover">
+                            <tbody>
+                                <tr>
+                                    <th width="100">密码：</th>
+                                    <td><input class="input-medium form-control inline " type="password" id="pwd" name="pwd"
+                                            value=""></td>
+                                </tr>
+                                <tr>
+                                    <th width="100">确认密码：</th>
+                                    <td><input class=" input-medium form-control inline " type="password" id="confirmPwd" value=""></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn dark green btn-save radius6"><i class="fa fa-check"></i> 保存</button>
+                        <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i class="fa fa-remove"></i> 关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <table id="data-table" class="table table-striped table-bordered table-hover" width="100%">
+        <thead>
+            <tr>
+                <th>用户名</th>
+                <th>昵称</th>
+                <th>角色</th>
+                <th>电话</th>
+                <th>最后登陆</th>
+                <th>登陆IP</th>
+                <th>数据权限</th>
+                <th>管理权限</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+<script type="text/javascript">
+    var resource = "/main/sys-user";
+    $(function () {
+
+        DataTable.init({
+            url: resource, //ajax请求url
+            tableName: "data-table", //数据表table id
+            paramsFormName: "search-form", //查询参数form id
+            modal: "modals", //模态框div
+            columns: [ //列对应的字段数组，注意顺序
+                {
+                    data: "username"
+                },
+                {
+                    data: "nickname",
+                },
+                {
+                    data: "roleId",
+                    visible: false
+                },
+                {
+                    data: "roleName"
+                },
+                {
+                    data: "tel"
+                },
+                {
+                    data: "lastLoginDate",
+                    type: "datetime"
+                },
+                {
+                    data: "lastLoginIp"
+                },
+                {
+                    data: "enableDataRole",
+                    convert: "0=> |1=><span>√</span>"
+                },
+                {
+                    data: "isEnabled",
+                    convert: "1=> <input type='checkbox' class='ban-status-sw' data-size='small' checked >" +
+                        "|0=><input class='ban-status-sw'   type='checkbox' data-size='small'>"
+                },
+            ],
+            options: [ //操作区域(id)
+                {
+                    icon: "fa fa-edit",
+                    option: "modal-edit",
+                    edit: true,
+                    editMain: true,
+                    //                    visible: false,
+                    url: resource,
+                    pre: "checkDataRole"
+                },
+                {
+                    icon: "fa fa-unlock-alt",
+                    name: "密码重置",
+                    option: "modal-reset-pwd",
+                    before: "doResetUserPwd",
+                    url: "/main/resetPwd",
+                    edit: true,
+                    success: "重置成功，请牢记您设置的密码",
+                },
+                {
+                    icon: "fa fa-remove",
+                    name: "删除",
+                    del: resource,
+                },
+            ],
+            handles: {
+                insert: [{
+                    url: resource,
+                    modalId: "modal-add"
+                }, ],
+            },
+            endFnOnce: "loadSelect",
+            endFn: "registerSwitch"
+        });
+
+
+
+
+        //新增时
+        $("#modal-add").on('show.bs.modal', function () {
+            $("*[name=enableDataRole]").bootstrapSwitch("state", false);
+        });
+
+        //数据权限开关事件
+        $("*[name=enableDataRole]").on("switchChange.bootstrapSwitch", function (e, state) {
+            if (state) {
+                $(".tr-role-config").css("display", "");
+            } else {
+                $(".tr-role-config").css("display", "none");
+                $(".tr-role-config").find("select").val("").change();
+            }
+        });
+
+    });
+
+    //重置密码
+    function doResetUserPwd() {
+        if ($("#pwd").val() == "" || $("#confirmPwd").val() == "") {
+            Shinez.tip("warning", "请输入密码");
+            return false;
+        }
+        if ($("#pwd").val() != $("#confirmPwd").val()) {
+            Shinez.tip("warning", "两次密码输入不一致");
+            return false;
+        }
+        return true;
+    }
+
+    function loadSelect(data) {
+        var roles = data.roles;
+        roles.forEach(function (v, k) {
+            $("select[name=roleId]").append("<option value='" + v.id + "'>" + v.roleName + "</option>");
+        });
+
+        var mps = data.mps;
+        if (mps != null) {
+            mps.forEach(function (v, k) {
+                $("select[name=mpid]").append("<option value='" + v.id + "'>" + v.nickName + "</option>");
+            });
+        }
+
+
+        var dataRoles = data.dataRoles;
+        var columnVal;
+        if (dataRoles != null) {
+            dataRoles.forEach(function (v, k) {
+               
+                if (v.dataSelects == null) {
+                    columnVal = "<input name='dataRoles[" + k + "].columnValue' value=''/>";
+                } else {
+                    columnVal = "<select class=' input-medium form-control inline '  name='dataRoles[" + k +
+                        "].columnValue'><option value=''>不选择</option>";
+                    v.dataSelects.forEach(function (a, b) {
+                        columnVal += "<option value='" + a.id + "'>" + a[Object.getOwnPropertyNames(a)[
+                            1]] + "</option>";
+                    });
+                    columnVal += "</select>";
+                }
+                $("#modal-add,#modal-edit").find("table").append("<tr data-code='" + v.dataRoleCode +
+                    "' class='tr-role-config' style='display: none'>" +
+                    "<td><input type='hidden' name='dataRoles[" + k + "].dataRoleCode' value='" + v.dataRoleCode +
+                    "'>" + v.roleName + "</td>" +
+                    //                "<td>"+v.tableName+"</td>" +
+                    //                "<td>"+v.columnName+"</td>" +
+                    "<td>" + columnVal + "</td></tr>");
+            });
+        }
+
+        $("select").select2();
+    }
+
+    function checkDataRole(obj) {
+        $("tr[data-code]").find("*[name*=columnValue]").val("").change();
+        var dataRoleStatus = $("tr[data-id=" + obj + "]").find("td[data-name=enableDataRole]").attr("data-value");
+        $(".tr-role-config").find("*[name*=columnValue]").val("");
+        if (dataRoleStatus == "true" || dataRoleStatus == true || dataRoleStatus == "1" || dataRoleStatus == 1) { //如果有数据权限
+            Shinez.get("/main/sys-user/" + obj + "/data-role", function (ret) {
+                if (ret.code == 0) {
+                    var role = ret.data.arrayList;
+                    role.forEach(function (v, k) {
+                        $("tr[data-code=" + v.dataRoleCode + "]").find("*[name*=columnValue]").val(v.columnValue)
+                            .change();
+                    });
+                }
+            });
+        } else {
+            $("*[name=enableDataRole]").bootstrapSwitch("state", false);
+        }
+    }
+
+    function registerSwitch() {
+        $('.ban-status-sw').on('switchChange.bootstrapSwitch', function (e, state) {
+            var $this = $(this);
+            $this.bootstrapSwitch('state', !state, true);
+            $(this).parents("tr").trigger("dblclick");
+        });
+
+    }
+</script>

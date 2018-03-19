@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>创建运单 step 3</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.1.3/weui.min.js"></script>
+    <script type="text/javascript" src="js/config/config.js"></script>
+    <script type="text/javascript" src="js/config/wechat-handler.js"></script>
+    <script src="js/util/jquery-serialize-json.js"></script>
+</head>
+<body>
+<div class="scroller">
+    <form action="javascript:">
+        <input type="hidden" name="id" value="">
+        <input type="hidden" class="price-sum" name="totalFreight" value="">
+        <input type="hidden" class="price-sum" name="coverage" value="">
+        <input type="hidden" class="price-sum" name="premium" value="">
+        <div class="setup">
+            <h4>付款总额<span id="totalPayments">￥0</span></h4>
+            <input type="hidden" name="totalPayments" value="">
+
+            <h3 class="yufk">预付款合计<span id="prepayment">￥0</span></h3>
+            <input type="hidden" name="prepayment" >
+            <label>
+                <span>现金</span>
+                <div class="right">
+                    <input type="number" name="prepaymentCash" onchange="calcPreTotal();" placeholder="¥ （现金和油卡至少填一项）"
+                           class="input  pre-sum" >
+                </div>
+            </label>
+            <label>
+                <span>油卡</span>
+                <div class="right">
+                    <input type="number" name="prepaymentOilCard" onchange="calcPreTotal()" placeholder="¥ （现金和油卡至少填一项）"
+                           class="input  pre-sum" >
+                </div>
+            </label>
+
+            <h4 style="height: 0.2rem;"></h4>
+
+            <h3 class="yufk">回单付合计 <span id="totalReceipt">￥0</span></h3>
+            <input type="hidden" name="totalReceipt" >
+
+            <label>
+                <span>现金</span>
+                <div class="right">
+                    <input type="number" name="receiptCash"  onchange="calcRecTotal()" placeholder="¥ （现金和油卡至少填一项）"
+                           class="input  rec-sum">
+                </div>
+            </label>
+            <label>
+                <span>油卡</span>
+                <div class="right">
+                    <input type="number" name="receiptOilCard"  onchange="calcRecTotal()" placeholder="¥ （现金和油卡至少填一项）"
+                           class="input  rec-sum">
+                </div>
+            </label>
+        </div>
+        <div class="setup">
+            <h3></h3>
+            <label>
+                <span>到付</span>
+                <div class="right">
+                    <input type="number" onchange="calcTotalPayment()" name="fadPayment" placeholder="¥ （非必填）"
+                           class="input " >
+                </div>
+            </label>
+            <label>
+                <span>月结</span>
+                <div class="right">
+                    <input type="number" onchange="calcTotalPayment()" name="monthBalance" placeholder="¥ （非必填）"
+                           class="input " >
+                </div>
+            </label>
+            <label>
+                <span>装卸费</span>
+                <div class="right">
+                    <input type="text" onchange="calcTotalPayment()" name="coolieHire" placeholder="¥ （非必填）"
+                           class="input " >
+                </div>
+            </label>
+            <label>
+                <span>其他</span>
+                <div class="right">
+                    <input type="number" onchange="calcTotalPayment()" name="other" placeholder="¥  （非必填）"
+                           class="input " >
+                </div>
+            </label>
+        </div>
+        <div class="setup">
+            <h4>承运信息</h4>
+            <label>
+                <span>承运公司</span>
+                <div class="right">
+                    <select name="carriageId"
+                            onchange="$('input[name=carriageCompany]').val($('select[name=carriageId] option:selected').text())"
+                            style="width: 100%">
+                        <option value="">请选择承运公司</option>
+                    </select>
+                    <input type="hidden" name="carriageCompany" value="">
+                </div>
+            </label>
+            <label>
+                <span>司机姓名</span>
+                <div class="right">
+                    <input name="driverName" type="text" placeholder="请输入司机姓名" class="input">
+                </div>
+            </label>
+            <label>
+                <span>联系电话</span>
+                <div class="right">
+                    <input name="driverTel" type="text" placeholder="请输入司机联系电话" class="input">
+                </div>
+            </label>
+            <label>
+                <span>身份证号</span>
+                <div class="right">
+                    <input name="driverCard" type="text" placeholder="请输入司机身份证号" class="input">
+                </div>
+            </label>
+            <div class="label">
+                <span>车牌号</span>
+                <div class="right">
+                    <select name="provLite" onchange="setPlateNum()">
+                        <option value="">沪</option>
+                        <option value="">苏</option>
+                        <option value="">浙</option>
+                        <option value="">皖</option>
+                        <option value="">京</option>
+                        <option value="">津</option>
+                        <option value="">冀</option>
+                        <option value="">晋</option>
+                        <option value="">蒙</option>
+                        <option value="">黑</option>
+                        <option value="">吉</option>
+                        <option value="">辽</option>
+                        <option value="">闽</option>
+                        <option value="">赣</option>
+                        <option value="">鲁</option>
+                        <option value="">豫</option>
+                        <option value="">鄂</option>
+                        <option value="">湘</option>
+                        <option value="">粤</option>
+                        <option value="">桂</option>
+                        <option value="">琼</option>
+                        <option value="">川</option>
+                        <option value="">贵</option>
+                        <option value="">云</option>
+                        <option value="">渝</option>
+                        <option value="">藏</option>
+                        <option value="">陕</option>
+                        <option value="">甘</option>
+                        <option value="">青</option>
+                        <option value="">宁</option>
+                        <option value="">新</option>
+                        <option value="">港</option>
+                        <option value="">澳</option>
+                        <option value="">台湾省</option>
+                        <option value="">美国</option>
+                        <option value="">加拿大</option>
+                        <option value="">其他地区</option>
+                    </select>
+                    <input type="text" name="plateNumLite" onchange="setPlateNum()" placeholder="请输入车牌号" class="input"
+                           style="width: 66%;">
+                    <input type="hidden" name="plateNumber" value="">
+                </div>
+            </div>
+        </div>
+        <div class="setupbtn">
+            <button class="back">后 退</button>
+            <button class="next" onclick="create()">下一步</button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="js/util/async-request.js"></script>
+<script type="text/javascript">
+
+    function setPlateNum() {
+        document.querySelector("input[name= plateNumber]").value =
+            $("select[name=provLite] option:selected").text() +
+            document.querySelector("input[name=plateNumLite]").value;
+        console.log(document.querySelector("input[name= plateNumber]").value);
+    }
+
+    var id = getQueryString("id");
+    $('.back').click(function () {
+        window.location.href = "创建运单2.html?id=" + id;
+    })
+
+
+    function init() {
+        if (id == null) {
+            weui.alert('无法获取运单信息', function () {
+                history.go(-1);
+            });
+        } else {
+            loadCompany();
+        }
+    }
+
+    function calcPreTotal() {
+
+        var preTotal = 0;
+        $.each($(".pre-sum"), function (k, v) {
+            var p = $(v).val();
+            p = p == "" ? 0 : parseFloat(p);
+            preTotal = parseFloat(preTotal);
+            preTotal += p;
+            preTotal = preTotal.toFixed(2);
+        })
+
+        $("#prepayment").html("￥" + preTotal);
+        $("input[name=prepayment]").val(preTotal);
+
+        calcTotalPayment();
+    }
+
+    function calcRecTotal() {
+
+        var recTotal = 0;
+        $.each($(".rec-sum"), function (k, v) {
+            var p = $(v).val();
+            p = p == "" ? 0 : parseFloat(p);
+            recTotal = parseFloat(recTotal);
+            recTotal += p;
+            recTotal = recTotal.toFixed(2)
+        })
+
+        $("#totalReceipt").html("￥" + recTotal);
+        $("input[name=totalReceipt]").val(recTotal);
+
+        calcTotalPayment();
+    }
+
+    function calcTotalPayment() {
+        var total = 0;
+        $.each($(".price-sum"), function (k, v) {
+            var p = $(v).val();
+            p = p == "" ? 0 : parseFloat(p);
+            total = parseFloat(total)
+            total += p;
+            total = total.toFixed(2)
+        })
+
+        $("#totalPayments").html("￥" + total);
+        $("input[name=totalPayments]").val(total);
+
+    }
+
+    init();
+
+    function loadCompany() {
+        var reqconfig = new ReqConfig(true, "获取承运公司", true);
+        req.setConfig(reqconfig);
+        req.get("/company/info", function (ret) {
+            console.log(ret);
+            $.each(ret.data.companyLt, function (k, v) {
+                $("select[name=carriageId]").append("<option value='" + v.prodConceptID + "'>" + v.prodName + "</option>")
+            })
+            loadCache(id);
+        }, function (ret) {
+            weui.alert("网络错误，请稍后再试！");
+        })
+    }
+
+    function loadCache(id) {
+        req.get("/order/detailbase?id=" + id, function (ret) {
+            console.log(ret);
+
+            var orderDetail = ret.data.orderm;
+
+            if (orderDetail != null) {
+
+                $.each(orderDetail, function (k, v) {
+                    var element = document.querySelector("*[name=" + k + "]");
+                    if (k === "plateNumber") {
+                        document.querySelector("input[name=plateNumLite]").value = v.substr(1,v.length);
+                    }
+                    if (element != null) {
+                        element.value = v;
+                        $(element).change();
+                    }
+                });
+            }
+
+            setTimeout(function () {
+                calcTotalPayment();
+            }, 500)
+
+
+        });
+    }
+
+
+    function create() {
+        console.log($("form").serializeObject());
+        var reqconfig = new ReqConfig(true, "正在保存", true);
+        req.setConfig(reqconfig);
+        req.post("/order/edittwiceorder", JSON.stringify($("form").serializeObject()), function (ret) {
+            console.log(ret);
+            if (ret.code === SUCCESS) {
+                window.location.href = "提交运单.html?id=" + (id == null ? ret.data.orderId : id);
+            } else {
+                if (ret.code === FAIL) {
+                    weui.alert(ret.msg);
+                }
+            }
+        })
+
+
+    }
+</script>
+</body>
+
+</html>

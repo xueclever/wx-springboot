@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>身份绑定</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.1.3/weui.min.js"></script>
+    <script type="text/javascript" src="js/config/config.js"></script>
+    <script type="text/javascript" src="js/config/wechat-handler.js"></script>
+</head>
+<body>
+<div class="scroller">
+    <form action="javascript:">
+
+
+        <div class="register">
+            <label class="clearfix">
+                <span><img src="images/a10.png" width="100%"></span>
+                <div class="right">
+                    <input type="number" name="tel" placeholder="请输入手机号">
+                </div>
+            </label>
+            <label class="clearfix">
+                <span><img src="images/a11.png" width="100%"></span>
+                <div class="right">
+                    <input type="number" name="code" placeholder="请输入验证码" class="code">
+                    <em class="getcode" id="sms-btn" onclick="getCode()">获取验证码</em>
+                </div>
+            </label>
+
+        </div>
+        <div class="per-btn">
+            <button style="margin: 2rem auto 1rem;" onclick="doSubmit()">确认</button>
+        </div>
+    </form>
+    <div class="info"><p><img src="images/a12.png" width="100%">温馨提示：请输入您在单多多登记的手机，绑定之后您可以查询订单的详情信息。</p></div>
+</div>
+<script src="js/main.js"></script>
+</body>
+<script type="text/javascript" src="js/util/async-request.js"></script>
+
+<script>
+    console.log(getQueryString("ref"))
+
+    function doSubmit() {
+        if (!checkTel()) {
+            return;
+        }
+
+        var code = $("input[name=code]").val();
+        if (code.length < 4) {
+            weui.alert("请输入正确的验证码");
+        }
+
+        req.post("/member/bingding", $("form").serialize(), function (ret) {
+            if (ret.code == SUCCESS) {
+                var ref = getQueryString("ref");
+                location.href = "绑定成功.html?ref=" + ref;
+            } else {
+                weui.alert("绑定失败，" + ret.msg);
+            }
+        })
+    }
+
+    function checkSmsCodeSendTime() {
+        var lastSendTime = localStorage.getItem("lastSendTime");
+        if (lastSendTime == null || (new Date().getTime() - parseInt(lastSendTime) >= 60 * 1000)) {
+            localStorage.setItem("lastSendTime", new Date().getTime());
+            return true;
+        } else {
+            if (new Date().getTime() - parseInt(lastSendTime) < 60 * 1000) {
+                return false;
+            }
+        }
+    }
+
+    function getCode() {
+        if (!checkTel()) {
+            return;
+        }
+        if (!checkSmsCodeSendTime()) {
+            console.log("触发分钟级流控");
+            return;
+        }
+        var tel = $("input[name=tel]").val();
+        req.get("/tecent/sendCode?tel=" + tel, function (ret) {
+            console.log(ret);
+            document.querySelector("#sms-btn").innerHTML = "已发送";
+            document.querySelector("#sms-btn").style.background = "#ccc";
+            setTimeout(function () {
+                document.querySelector("#sms-btn").innerHTML = "获取验证码";
+                document.querySelector("#sms-btn").style.background = "#94C357";
+            }, 60000);
+            weui.alert("发送成功");
+        })
+    }
+
+    function checkTel() {
+        var tel = $("input[name=tel]").val();
+        if (tel.length != 11) {
+            weui.alert("请输入正确的手机号码");
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>

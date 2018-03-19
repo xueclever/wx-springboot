@@ -1,0 +1,100 @@
+.hide {display: none;}
+.mt10 {margin-top: 10px;}
+.control-group {overflow: hidden;}
+.control-group a {color: #666;text-decoration: none;}
+.control-group a:hover {text-decoration: underline;}
+.control-label {float: left;width: 100px;line-height: 24px;}
+.controls {overflow: hidden;}
+.controls input[type="text"] {border: 1px solid #ddd;height: 20px;width: 120px;}
+.controls input[type="button"] {margin-top: 10px;height: 32px;cursor: pointer;}
+.config_item {margin-top: 10px;border: 1px dashed #ddd;padding: 10px;}
+.config_item section {margin-top: 10px;}
+.config_item section span {margin-right: 16px;}
+.config_item input[type="text"] {width: 80px;text-align: center;}
+.choose_config .Father_Title {margin: 0;margin-bottom: 10px;padding: 0;font-size: 14px;font-weight: normal;display: inline-block;vertical-align: middle;}
+.choose_config .Father_Item {padding: 0;margin: 0;margin-bottom: 10px;list-style: none;display: inline-block;vertical-align: middle;}
+.choose_config .Father_Item li {display: inline-block;margin-right: 10px;}
+.columnList {border-collapse: collapse;}
+.columnList th {background-color: #eee;}
+.columnList th,.columnList td {padding: 5px 10px;border: 1px solid #ddd;line-height: 24px;text-align: left;}
+.errorTitle{color:#f50a0a;font-size: 10px;}
+
+
+.pull-in {
+    margin-left: -15px;
+    /* margin-right: -15px; */
+}
+
+.line-dashed {
+    border-style: dashed;
+    background: 0 0;
+}
+
+.line-lg {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.line {
+    height: 2px;
+    margin: 10px 0;
+    font-size: 0;
+    overflow: hidden;
+    background-color: transparent;
+    border-width: 0;
+    border-top: 1px solid #e8e8e8;
+}
+
+
+.js_limit {
+    position: absolute;
+    right: 11px;
+    top: 1px;
+    color: #999;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 5px;
+    background: #fff;
+}
+
+.help-block {
+    color: #a3a3a3;
+    margin: 0;
+    padding-top: 5px;
+    margin-left: 2rem;
+}
+
+.help-block-title {
+    color: #a3a3a3;
+    margin: 0;
+    padding-top: 5px;
+    margin-left: 2rem;
+}
+
+.js_custom_list a, .add-attr a {
+    color: #4cc0c1 !important;
+    margin-left: 2rem;
+}
+
+.btn-primary {
+    color: #fff!important;
+    background-color: #65bd77;
+    border-color: #65bd77;
+}
+
+.hide {
+    display: none!important;
+}
+
+.col-sm-1 {
+    width: 8.33333333%;
+    float:left
+}
+.col-sm-5 {
+    width: 41.66666667%;
+    float:left
+}
+.col-sm-2 {
+    width: 16.66666667%;
+    float:left
+}

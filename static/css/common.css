@@ -1,0 +1,91 @@
+.btn-upload {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #ccc;
+    background: #eee;
+    color: #999;
+    text-decoration: none;
+    position: relative;
+    left: 0;
+    top: 0
+}
+
+.img-tip {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0
+}
+
+.btn-upload > img {
+    display: block
+}
+
+.btn-upload:hover {
+    background: #ccc;
+    text-decoration: none;
+    color: #fff
+}
+
+.required-star {
+    color: #e02222;
+    padding-left: 2px;
+    font-family: 'simhei', sans-serif;
+    font-size: 14px;
+}
+
+.img-del {
+    position: relative;
+    left: 97px;
+    top: 5px;
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    background-color: white;
+}
+
+.border-none {
+    border: none;
+}
+
+.top-handle-btn {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.inputtime {
+    float: left
+}
+
+.fist {
+    float: left
+}
+
+/*.form_datetime{*/
+/*!*margin-left:10px;*!*/
+/*margin-right:10px;*/
+/*display:inline-block;*/
+/*}*/
+/*.date-set{*/
+/*padding:2px 4px !important*/
+/*}*/
+.form_datetime span {
+    float: left
+}
+
+.radius6 {
+    border-radius: 6px !important;
+}
+
+.icon-20 {
+    font-size: 20px;
+}
+
+.icon-18 {
+    font-size: 18px;
+}

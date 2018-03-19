@@ -1,0 +1,83 @@
+server:
+ port: 9000
+ context-path: /api
+
+########################################################
+###FREEMARKER (FreeMarkerAutoConfiguration)
+########################################################
+
+spring:
+ jackson:
+  default-property-inclusion: NON_NULL
+
+########################################################
+###datasource
+########################################################
+
+ datasource:
+  type: org.apache.commons.dbcp.BasicDataSource
+  url: jdbc:mysql://127.0.0.1:3306/kexiang?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+  username: root
+  password: 123456
+  driverClassName: com.mysql.jdbc.Driver
+  initial-size: 10
+  max-active: 20
+  max-idle: 8
+  min-idle: 8
+  testOnBorrow: true
+  validation-query: SELECT 1 FROM DUAL
+  validation-query-timeout: 300
+
+
+
+
+
+########################################################
+## REDIS (RedisProperties)
+########################################################
+ redis:
+  database: 3
+  host: 127.0.0.1
+  password:
+  port: 6379
+  pool:
+   max-idle: 8
+   min-idle: 0
+   max-active: 8
+   max-wait: -1
+
+
+ session:
+  store-type: redis
+
+ cache:
+  type: redis
+
+jwt:
+ #7天有效期
+ expiration: 604800
+ header: Authorization
+
+
+writeIp: 127.0.0.1|192.168.110.203
+
+---
+
+spring:
+ profiles: local
+
+ datasource:
+  url: jdbc:mysql://127.0.0.1:3306/kexiang?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=true
+  username: root
+  password: 123456
+
+
+---
+
+spring:
+  profiles: test
+
+  datasource:
+    url: jdbc:mysql://192.168.110.93:3306/kexiang?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=true
+    username: root
+    password: 123456

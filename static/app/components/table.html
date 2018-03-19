@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="javascript:" id="paramForm">
+
+    </form>
+
+    <table id="table1">
+        <thead>
+            <tr>
+                <th data-field="name" data-href="/queryName?name={name}">姓名</th>
+                <th data-field="clazz">班级</th>
+                <th data-field="age">年龄</th>
+                <th data-field="image" data-preview="true">照骗</th>
+                <th data-field="createdAt" data-formatter="yyyy-MM-dd">创建时间</th>
+                <th data-field="prize" data-return="￥+{prize}">价格</th>
+                <th data-field="prize2" data-return="￥+{prize+prize2}">总价</th>
+            </tr>
+        </thead>
+    </table>
+</body>
+
+<script>
+    var datagrid = new Datagrid("#table1")
+    datagrid.setPaginationForm("#pageForm")//后台分页支持
+    datagrid.setParamForm("#paramForm")//查询参数
+    datagrid.multiple = true//开启表头复选框
+    datagrid.urlPrefix = "/api";
+    datagrid.url = "/school/student"
+    datagrid.responsePage = "page";
+    datagrid.create()
+</script>
+
+</html>

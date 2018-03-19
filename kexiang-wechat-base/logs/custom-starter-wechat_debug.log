@@ -1,0 +1,722 @@
+13:17:34.788 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:17:34.818 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:17:35.017 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:18:38.996 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:18:38.996 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:18:38.998 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:20:18.530 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:20:18.531 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:20:18.532 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:20:18.813 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==>  Preparing: SELECT id,appid,openid,subscribe,subscribe_time,remark,nickname,sex,province,city,country,headimgurl,privilege,unionid,groupid,targid_list FROM wechat_user WHERE openid = ? 
+13:20:18.813 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+13:20:18.862 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - <==      Total: 0
+13:20:18.867 DEBUG c.w.c.w.m.W.insertSelective - ==>  Preparing: INSERT INTO wechat_user ( id,appid,openid,nickname,sex,province,city,country,headimgurl,privilege ) VALUES( ?,?,?,?,?,?,?,?,?,? ) 
+13:20:18.868 DEBUG c.w.c.w.m.W.insertSelective - ==> Parameters: null, wxbd296320838eb230(String), oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 廖雪冰(String), true(Boolean), 湖南(String), 长沙(String), 中国(String), http://thirdwx.qlogo.cn/mmopen/vi_32/oxU5cm6aoPvSST9Ym1iagx7ib7eYhtYRvp9JdxNZc67RjKqM74YJDMgia8MKIIZfzzSGH5p2pkia7OMEO6ES5Mqt3Q/132(String), [](String)
+13:20:18.935 DEBUG c.w.c.w.m.W.insertSelective - <==    Updates: 1
+13:20:18.939 DEBUG c.w.c.w.m.W.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+13:20:18.958 DEBUG c.w.c.w.m.W.insertSelective!selectKey - <==      Total: 1
+13:20:19.557 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:20:19.558 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:20:19.559 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:20:19.641 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:20:19.642 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:20:19.676 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 2
+13:20:35.845 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:20:35.846 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:20:35.849 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:20:35.852 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:20:35.852 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:20:35.854 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 2
+13:21:37.785 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:21:37.785 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:21:37.786 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:21:37.790 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:21:37.790 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:21:37.793 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 2
+13:22:20.419 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:22:20.420 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:22:20.421 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:22:20.425 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:22:20.425 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:22:20.427 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 2
+13:22:26.960 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:22:26.961 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:22:26.966 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:22:26.970 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:22:26.970 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:22:26.971 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 2
+13:22:40.388 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:22:40.390 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:22:40.393 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:22:40.400 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:22:40.400 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:22:40.402 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 2
+13:22:58.245 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:22:58.246 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:22:58.248 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:22:58.253 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:22:58.254 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:22:58.255 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 2
+13:23:02.378 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:23:02.378 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:23:02.379 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:23:02.382 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:23:02.383 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:23:02.383 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 2
+13:23:41.725 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:23:41.726 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:23:41.729 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:23:41.736 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE appid = ? 
+13:23:41.738 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - ==> Parameters: wxbd296320838eb230(String)
+13:23:41.740 DEBUG c.w.c.w.m.WechatMpsMapper.selectOne - <==      Total: 1
+13:23:53.609 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:23:53.609 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:23:53.610 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:24:21.997 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:24:21.997 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:24:21.998 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:25:45.696 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:25:45.697 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:25:45.698 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:26:22.104 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:26:22.105 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:26:22.106 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:26:33.732 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:26:33.732 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:26:33.733 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:26:58.281 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:26:58.281 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:26:58.282 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:26:58.498 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==>  Preparing: SELECT id,appid,openid,subscribe,subscribe_time,remark,nickname,sex,province,city,country,headimgurl,privilege,unionid,groupid,targid_list FROM wechat_user WHERE openid = ? 
+13:26:58.499 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+13:26:58.515 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - <==      Total: 1
+13:26:58.517 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==>  Preparing: UPDATE wechat_user SET appid = ?,openid = ?,nickname = ?,sex = ?,province = ?,city = ?,country = ?,headimgurl = ?,privilege = ? WHERE id = ? 
+13:26:58.518 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==> Parameters: wxbd296320838eb230(String), oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 廖雪冰(String), true(Boolean), 湖南(String), 长沙(String), 中国(String), http://thirdwx.qlogo.cn/mmopen/vi_32/oxU5cm6aoPvSST9Ym1iagx7ib7eYhtYRvp9JdxNZc67RjKqM74YJDMgia8MKIIZfzzSGH5p2pkia7OMEO6ES5Mqt3Q/132(String), [](String), 10(Integer)
+13:26:58.614 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - <==    Updates: 1
+13:26:58.819 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:26:58.820 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:26:58.821 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:28:22.080 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:28:22.081 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:28:22.082 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:28:51.259 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:28:51.259 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:28:51.260 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:29:13.213 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:29:13.213 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:29:13.214 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:29:13.395 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==>  Preparing: SELECT id,appid,openid,subscribe,subscribe_time,remark,nickname,sex,province,city,country,headimgurl,privilege,unionid,groupid,targid_list FROM wechat_user WHERE openid = ? 
+13:29:13.395 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+13:29:13.396 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - <==      Total: 1
+13:29:13.397 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==>  Preparing: UPDATE wechat_user SET appid = ?,openid = ?,nickname = ?,sex = ?,province = ?,city = ?,country = ?,headimgurl = ?,privilege = ? WHERE id = ? 
+13:29:13.398 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==> Parameters: wxbd296320838eb230(String), oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 廖雪冰(String), true(Boolean), 湖南(String), 长沙(String), 中国(String), http://thirdwx.qlogo.cn/mmopen/vi_32/oxU5cm6aoPvSST9Ym1iagx7ib7eYhtYRvp9JdxNZc67RjKqM74YJDMgia8MKIIZfzzSGH5p2pkia7OMEO6ES5Mqt3Q/132(String), [](String), 10(Integer)
+13:29:13.448 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - <==    Updates: 1
+13:29:13.665 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:29:13.666 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:29:13.666 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:29:53.315 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:29:53.316 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:29:53.317 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:29:55.123 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:29:55.123 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:29:55.124 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:34:34.270 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:34:34.271 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:34:34.272 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:34:34.510 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==>  Preparing: SELECT id,appid,openid,subscribe,subscribe_time,remark,nickname,sex,province,city,country,headimgurl,privilege,unionid,groupid,targid_list FROM wechat_user WHERE openid = ? 
+13:34:34.511 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+13:34:34.512 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - <==      Total: 1
+13:34:34.513 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==>  Preparing: UPDATE wechat_user SET appid = ?,openid = ?,nickname = ?,sex = ?,province = ?,city = ?,country = ?,headimgurl = ?,privilege = ? WHERE id = ? 
+13:34:34.515 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==> Parameters: wxbd296320838eb230(String), oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 廖雪冰(String), true(Boolean), 湖南(String), 长沙(String), 中国(String), http://thirdwx.qlogo.cn/mmopen/vi_32/oxU5cm6aoPvSST9Ym1iagx7ib7eYhtYRvp9JdxNZc67RjKqM74YJDMgia8MKIIZfzzSGH5p2pkia7OMEO6ES5Mqt3Q/132(String), [](String), 10(Integer)
+13:34:34.556 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - <==    Updates: 1
+13:34:34.773 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:34:34.774 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:34:34.775 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:35:06.233 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:35:06.233 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:35:06.234 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:37:39.000 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:37:39.001 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:37:39.001 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:39:37.032 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:39:37.033 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:39:37.034 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:40:03.986 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:40:03.987 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:40:03.988 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:40:16.052 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:40:16.052 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:40:16.053 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:40:16.195 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==>  Preparing: SELECT id,appid,openid,subscribe,subscribe_time,remark,nickname,sex,province,city,country,headimgurl,privilege,unionid,groupid,targid_list FROM wechat_user WHERE openid = ? 
+13:40:16.196 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+13:40:16.197 DEBUG c.w.c.w.m.WechatUserMapper.selectOne - <==      Total: 1
+13:40:16.199 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==>  Preparing: UPDATE wechat_user SET appid = ?,openid = ?,nickname = ?,sex = ?,province = ?,city = ?,country = ?,headimgurl = ?,privilege = ? WHERE id = ? 
+13:40:16.200 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - ==> Parameters: wxbd296320838eb230(String), oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 廖雪冰(String), true(Boolean), 湖南(String), 长沙(String), 中国(String), http://thirdwx.qlogo.cn/mmopen/vi_32/oxU5cm6aoPvSST9Ym1iagx7ib7eYhtYRvp9JdxNZc67RjKqM74YJDMgia8MKIIZfzzSGH5p2pkia7OMEO6ES5Mqt3Q/132(String), [](String), 10(Integer)
+13:40:16.254 DEBUG c.w.c.w.m.W.updateByPrimaryKeySelective - <==    Updates: 1
+13:40:16.630 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:40:16.631 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:40:16.632 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:40:45.029 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:40:45.030 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:40:45.031 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+13:41:07.468 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+13:41:07.468 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+13:41:07.469 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+14:20:18.081 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+14:20:18.084 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+14:20:18.088 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+16:50:04.589 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+16:50:04.591 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+16:50:04.665 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+16:50:27.078 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+16:50:27.078 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+16:50:27.088 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+16:50:32.587 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+16:50:32.587 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+16:50:32.588 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+16:51:18.553 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+16:51:18.568 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+16:51:18.568 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+16:51:35.927 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+16:51:35.927 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+16:51:35.928 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+16:52:02.972 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+16:52:02.998 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+16:52:03.158 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 0
+16:53:43.531 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+16:53:43.537 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+16:53:43.538 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 0
+16:53:56.369 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+16:53:56.384 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+16:53:56.385 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 0
+16:54:00.890 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+16:54:00.896 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+16:54:00.897 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 0
+16:54:04.442 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+16:54:04.443 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer)
+16:54:04.773 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 0
+16:54:06.348 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+16:54:06.361 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+16:54:06.362 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 0
+16:54:10.224 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+16:54:10.235 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer)
+16:54:10.250 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 0
+16:54:12.507 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+16:54:12.518 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+16:54:12.519 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 0
+16:55:23.388 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+16:55:23.389 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+16:55:23.407 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1
+16:55:37.650 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+16:55:37.651 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+16:55:37.652 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 0
+17:02:39.695 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:02:39.707 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:02:39.708 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 0
+17:03:16.492 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE telphone = ? 
+17:03:16.492 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: 15173139267(String)
+17:03:16.523 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:03:16.554 DEBUG c.w.k.w.m.M.updateByPrimaryKeySelective - ==>  Preparing: UPDATE member SET member_no = ?,openid = ?,head_img_url = ?,nick_name = ?,telphone = ?,member_type = ?,member_company = ?,member_name = ?,create_time = ? WHERE id = ? 
+17:03:16.579 DEBUG c.w.k.w.m.M.updateByPrimaryKeySelective - ==> Parameters: 1001(String), oVg3v1NVKsE6trCt4B6hoD7vBehE(String), http://thirdwx.qlogo.cn/mmopen/vi_32/oxU5cm6aoPvSST9Ym1iagx7ib7eYhtYRvp9JdxNZc67RjKqM74YJDMgia8MKIIZfzzSGH5p2pkia7OMEO6ES5Mqt3Q/132(String), 廖雪冰(String), 15173139267(String), 1(String), 上海美萌(String), 廖雪冰(String), 2018-02-28 00:00:00.0(Timestamp), 1(Integer)
+17:03:16.781 DEBUG c.w.k.w.m.M.updateByPrimaryKeySelective - <==    Updates: 1
+17:03:23.148 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:03:23.149 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:03:23.150 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:03:41.627 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:03:41.628 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer)
+17:03:41.629 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 0
+17:03:43.305 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:03:43.306 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:03:43.306 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:03:44.383 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:03:44.391 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 1(Integer)
+17:03:44.393 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 0
+17:03:47.382 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:03:47.383 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:03:47.383 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:03:51.737 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:03:51.737 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer)
+17:03:51.738 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 0
+17:03:53.633 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:03:53.634 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:03:53.634 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:05:14.440 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:14.440 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:05:14.563 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:14.565 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:14.565 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1201(Integer)
+17:05:14.576 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:14.577 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:14.577 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120101(Integer)
+17:05:14.610 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:14.612 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:14.612 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 25(Integer)
+17:05:14.612 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:14.627 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:14.628 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 2514(Integer)
+17:05:14.634 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:14.635 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:14.635 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 251401(Integer)
+17:05:14.710 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:14.732 DEBUG c.w.k.w.m.O.insertSelective - ==>  Preparing: INSERT INTO orderm ( id,rec_person,openid,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt ) VALUES( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ) 
+17:05:14.762 DEBUG c.w.k.w.m.O.insertSelective - ==> Parameters: null, 2(String), oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer), 2018-03-15 17:05:14.71(Timestamp), 1(String), 1(String), 12(Integer), 河北(String), 1201(Integer), 唐山市(String), 120101(Integer), 路北区(String), 1(String), 1(Integer), 12(String), 12(String), 12(String), 25(Integer), 河南(String), 2514(Integer), 信阳市(String), 251401(Integer), 平桥区(String), 12(String), 2018-03-15 00:00:00.0(Timestamp), 2018-03-18 00:00:00.0(Timestamp), 12(Integer)
+17:05:14.931 DEBUG c.w.k.w.m.O.insertSelective - <==    Updates: 1
+17:05:14.946 DEBUG c.w.k.w.m.O.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+17:05:14.953 DEBUG c.w.k.w.m.O.insertSelective!selectKey - <==      Total: 1
+17:05:15.258 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:05:15.259 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:05:15.324 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:05:15.379 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:05:15.394 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:05:15.487 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:05:27.345 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:05:27.345 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:05:27.369 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:05:27.379 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:05:27.379 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:05:27.380 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:05:28.665 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:28.672 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:05:28.682 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:28.684 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:28.684 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1201(Integer)
+17:05:28.685 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:28.686 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:28.686 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120101(Integer)
+17:05:28.687 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:28.689 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:28.689 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 25(Integer)
+17:05:28.690 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:28.693 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:28.693 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 2514(Integer)
+17:05:28.694 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:28.713 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:05:28.714 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 251401(Integer)
+17:05:28.714 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:05:28.725 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET rec_person = ?,rec_tel = ?,rec_unit_name = ?,rec_province_id = ?,rec_province = ?,rec_city_id = ?,rec_city = ?,rec_area_id = ?,rec_area = ?,rec_detail_adress = ?,rec_mode = ?,mail_person = ?,mail_tel = ?,mail_unit_name = ?,mail_province_id = ?,mail_province = ?,mail_city_id = ?,mail_city = ?,mail_area_id = ?,mail_area = ?,mail_detail_adress = ?,mail_time = ?,arrive_time = ?,receipt = ? WHERE id = ? 
+17:05:28.726 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 2(String), 1(String), 1(String), 12(Integer), 河北(String), 1201(Integer), 唐山市(String), 120101(Integer), 路北区(String), 1(String), 1(Integer), 12(String), 12(String), 12(String), 25(Integer), 河南(String), 2514(Integer), 信阳市(String), 251401(Integer), 平桥区(String), 12(String), 2018-03-15 00:00:00.0(Timestamp), 2018-03-18 00:00:00.0(Timestamp), 12(Integer), 30(Integer)
+17:05:28.858 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:05:29.132 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:05:29.137 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:05:29.174 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:05:29.178 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:05:29.178 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:05:29.179 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:05:35.494 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+17:05:35.494 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 30(Integer)
+17:05:35.495 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+17:05:35.508 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+17:05:35.509 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 30(Integer), 12(String), 12(Integer), 2(Integer), 21(BigDecimal)
+17:05:35.585 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+17:05:35.595 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+17:05:35.601 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+17:05:35.603 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+17:05:35.637 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 252(BigDecimal), 12(BigDecimal), 12(BigDecimal), 30(Integer)
+17:05:35.846 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:05:39.990 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:05:39.991 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:05:40.008 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:05:40.009 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:05:40.016 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:05:40.024 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:05:41.030 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+17:05:41.030 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 30(Integer)
+17:05:41.130 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 1
+17:05:41.131 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+17:05:41.131 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 30(Integer), 12(String), 12(Integer), 2(Integer), 21(BigDecimal)
+17:05:41.190 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+17:05:41.190 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+17:05:41.191 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+17:05:41.192 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+17:05:41.192 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 252(BigDecimal), 12(BigDecimal), 12(BigDecimal), 30(Integer)
+17:05:41.265 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:05:41.680 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:05:41.681 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:05:41.683 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:05:41.698 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:05:41.699 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:05:41.699 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:05:43.905 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:05:43.905 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:05:43.908 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:05:43.909 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:05:43.909 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:05:43.919 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:06:03.612 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+17:06:03.613 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 30(Integer)
+17:06:03.689 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 1
+17:07:26.952 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+17:07:26.953 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 30(Integer)
+17:07:26.954 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+17:07:29.352 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:07:29.353 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:07:29.372 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:07:29.374 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:07:29.374 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:07:29.374 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:07:37.178 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+17:07:37.179 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 30(Integer)
+17:07:37.180 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+17:07:45.323 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:07:45.324 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:07:45.337 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:07:45.338 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:07:45.338 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:07:45.339 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:07:47.139 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:07:47.149 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:07:47.151 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:07:47.192 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:07:47.192 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:07:47.193 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:07:52.149 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:07:52.149 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:07:52.150 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:08:09.221 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:09.222 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:08:09.222 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:09.224 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:09.224 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:08:09.226 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:09.229 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:09.229 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:08:09.249 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:15.415 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:15.415 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:08:15.416 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:15.418 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:15.418 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:08:15.418 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:15.419 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:15.419 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:08:15.420 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:15.421 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:15.422 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:08:15.422 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:15.423 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:15.423 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1201(Integer)
+17:08:15.424 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:15.425 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:15.425 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120102(Integer)
+17:08:15.425 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:17.713 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:17.713 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:08:17.714 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:17.715 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:17.716 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:08:17.716 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:17.717 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:17.717 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:08:17.718 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:17.753 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:17.753 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:08:17.754 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:17.755 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:17.755 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1201(Integer)
+17:08:17.755 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:17.756 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:08:17.795 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120102(Integer)
+17:08:17.796 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:08:17.798 DEBUG c.w.k.w.m.O.insertSelective - ==>  Preparing: INSERT INTO orderm ( id,rec_person,openid,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt ) VALUES( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ) 
+17:08:17.800 DEBUG c.w.k.w.m.O.insertSelective - ==> Parameters: null, 1(String), oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer), 2018-03-15 17:08:17.796(Timestamp), (String), (String), 12(Integer), 河北(String), 1202(Integer), 秦皇岛市(String), 120202(Integer), 北戴河区(String), (String), 1(Integer), (String), (String), (String), 12(Integer), 河北(String), 1201(Integer), 唐山市(String), 120102(Integer), 古冶区(String), (String), 2018-03-15 00:00:00.0(Timestamp), 2018-03-18 00:00:00.0(Timestamp), 2(Integer)
+17:08:17.857 DEBUG c.w.k.w.m.O.insertSelective - <==    Updates: 1
+17:08:17.858 DEBUG c.w.k.w.m.O.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+17:08:17.859 DEBUG c.w.k.w.m.O.insertSelective!selectKey - <==      Total: 1
+17:08:18.154 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:08:18.154 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 31(Integer)
+17:08:18.155 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:08:18.158 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:08:18.158 DEBUG c.w.k.w.m.C.select - ==> Parameters: 31(Integer)
+17:08:18.158 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:09:45.966 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:09:45.969 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:09:45.971 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:09:48.416 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:09:48.416 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer)
+17:09:48.418 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 2
+17:09:50.515 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:09:50.515 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:09:50.516 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:09:50.517 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:09:50.517 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:09:50.518 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:09:53.187 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:09:53.188 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer)
+17:09:53.191 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 2
+17:09:56.372 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:09:56.372 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 31(Integer)
+17:09:56.392 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:09:56.393 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:09:56.394 DEBUG c.w.k.w.m.C.select - ==> Parameters: 31(Integer)
+17:09:56.394 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:11:27.293 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:27.346 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:11:27.347 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:27.349 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:27.349 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:11:27.349 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:27.350 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:27.350 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:11:27.350 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:30.833 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:30.834 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:11:30.835 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:30.836 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:30.836 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:11:30.850 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:30.852 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:30.852 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:11:30.853 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:33.339 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:33.339 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:11:33.342 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:33.346 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:33.346 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:11:33.346 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:33.348 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:33.348 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:11:33.348 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:35.428 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:35.428 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:11:35.428 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:35.429 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:35.430 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:11:35.430 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:35.442 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:35.442 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:11:35.443 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:38.149 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:38.149 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:11:38.149 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:38.161 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:38.161 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:11:38.162 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:38.202 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:38.203 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:11:38.203 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:38.204 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:38.204 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:11:38.205 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:38.207 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:38.208 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1201(Integer)
+17:11:38.208 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:38.210 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:38.210 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120102(Integer)
+17:11:38.211 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:40.519 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:40.519 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:11:40.520 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:40.561 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:40.561 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1202(Integer)
+17:11:40.562 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:40.562 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:40.563 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120202(Integer)
+17:11:40.577 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:40.579 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:40.580 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:11:40.580 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:40.581 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:40.582 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1201(Integer)
+17:11:40.582 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:40.583 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:11:40.583 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120102(Integer)
+17:11:40.583 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:11:40.585 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET rec_person = ?,rec_tel = ?,rec_unit_name = ?,rec_province_id = ?,rec_province = ?,rec_city_id = ?,rec_city = ?,rec_area_id = ?,rec_area = ?,rec_detail_adress = ?,rec_mode = ?,mail_person = ?,mail_tel = ?,mail_unit_name = ?,mail_province_id = ?,mail_province = ?,mail_city_id = ?,mail_city = ?,mail_area_id = ?,mail_area = ?,mail_detail_adress = ?,mail_time = ?,arrive_time = ?,receipt = ? WHERE id = ? 
+17:11:40.611 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 1(String), 1(String), 1(String), 12(Integer), 河北(String), 1202(Integer), 秦皇岛市(String), 120202(Integer), 北戴河区(String), 1(String), 1(Integer), 1(String), 1(String), 1(String), 12(Integer), 河北(String), 1201(Integer), 唐山市(String), 120102(Integer), 古冶区(String), 1(String), 2018-03-15 00:00:00.0(Timestamp), 2018-03-18 00:00:00.0(Timestamp), 2(Integer), 31(Integer)
+17:11:40.679 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:11:40.987 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:11:40.988 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 31(Integer)
+17:11:41.000 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:11:41.004 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:11:41.025 DEBUG c.w.k.w.m.C.select - ==> Parameters: 31(Integer)
+17:11:41.027 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:13:28.833 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+17:13:28.833 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 31(Integer)
+17:13:28.834 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+17:13:28.847 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+17:13:28.848 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 31(Integer), 1(String), 2(Integer), 2(Integer), 2(BigDecimal)
+17:13:28.907 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+17:13:28.908 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+17:13:28.909 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+17:13:28.935 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+17:13:28.935 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 4(BigDecimal), 12(BigDecimal), 12(BigDecimal), 31(Integer)
+17:13:29.007 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:13:29.462 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:13:29.462 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 31(Integer)
+17:13:29.466 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:13:29.468 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:13:29.468 DEBUG c.w.k.w.m.C.select - ==> Parameters: 31(Integer)
+17:13:29.469 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:13:53.259 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+17:13:53.261 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3539(Integer), 28(BigDecimal), 1(BigDecimal), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), 1(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 东立自有车辆(String), 1(String), 1(String), 1(String), 沪1(String), 31(Integer)
+17:13:53.322 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:13:53.697 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:13:53.697 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 31(Integer)
+17:13:53.700 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:13:53.701 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:13:53.702 DEBUG c.w.k.w.m.C.select - ==> Parameters: 31(Integer)
+17:13:53.702 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:13:58.224 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:13:58.224 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 31(Integer)
+17:13:58.225 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:13:58.226 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:13:58.227 DEBUG c.w.k.w.m.C.select - ==> Parameters: 31(Integer)
+17:13:58.227 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:13:58.727 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET isrefer = ?,orderNo = ? WHERE id = ? 
+17:13:58.727 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 1(Integer), 40170716480006622265(String), 31(Integer)
+17:13:58.839 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:14:27.781 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:14:27.782 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:14:27.783 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:14:30.372 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:14:30.372 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 0(Integer)
+17:14:30.373 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 1
+17:14:31.862 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:14:31.863 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:14:31.864 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:14:31.865 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:14:31.865 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:14:31.865 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:14:33.879 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:14:33.879 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 12(Integer)
+17:14:33.879 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:14:33.886 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:14:33.887 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 1201(Integer)
+17:14:33.887 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:14:33.888 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:14:33.888 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 120101(Integer)
+17:14:33.888 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:14:33.930 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:14:33.930 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 25(Integer)
+17:14:33.931 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:14:33.939 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:14:33.940 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 2514(Integer)
+17:14:33.940 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:14:33.941 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==>  Preparing: SELECT id,name,type,pid FROM city_info WHERE id = ? 
+17:14:33.941 DEBUG c.w.c.s.m.C.selectByPrimaryKey - ==> Parameters: 251401(Integer)
+17:14:33.942 DEBUG c.w.c.s.m.C.selectByPrimaryKey - <==      Total: 1
+17:14:33.944 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET rec_person = ?,rec_tel = ?,rec_unit_name = ?,rec_province_id = ?,rec_province = ?,rec_city_id = ?,rec_city = ?,rec_area_id = ?,rec_area = ?,rec_detail_adress = ?,rec_mode = ?,mail_person = ?,mail_tel = ?,mail_unit_name = ?,mail_province_id = ?,mail_province = ?,mail_city_id = ?,mail_city = ?,mail_area_id = ?,mail_area = ?,mail_detail_adress = ?,mail_time = ?,arrive_time = ?,receipt = ? WHERE id = ? 
+17:14:33.945 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 2(String), 1(String), 1(String), 12(Integer), 河北(String), 1201(Integer), 唐山市(String), 120101(Integer), 路北区(String), 1(String), 1(Integer), 12(String), 12(String), 12(String), 25(Integer), 河南(String), 2514(Integer), 信阳市(String), 251401(Integer), 平桥区(String), 12(String), 2018-03-15 00:00:00.0(Timestamp), 2018-03-18 00:00:00.0(Timestamp), 12(Integer), 30(Integer)
+17:14:34.003 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:14:34.344 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:14:34.345 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:14:34.348 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:14:34.349 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:14:34.367 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:14:34.367 DEBUG c.w.k.w.m.C.select - <==      Total: 0
+17:14:43.411 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==>  Preparing: delete from cargoinformation where order_id = ? 
+17:14:43.411 DEBUG c.w.k.w.m.CargoinformationMapper.del - ==> Parameters: 30(Integer)
+17:14:43.411 DEBUG c.w.k.w.m.CargoinformationMapper.del - <==    Updates: 0
+17:14:43.412 DEBUG c.w.k.w.m.C.insertSelective - ==>  Preparing: INSERT INTO cargoinformation ( id,order_id,cargo_name,count,unit,freight_unit ) VALUES( ?,?,?,?,?,? ) 
+17:14:43.413 DEBUG c.w.k.w.m.C.insertSelective - ==> Parameters: null, 30(Integer), 1(String), 1(Integer), 2(Integer), 1(BigDecimal)
+17:14:43.461 DEBUG c.w.k.w.m.C.insertSelective - <==    Updates: 1
+17:14:43.462 DEBUG c.w.k.w.m.C.insertSelective!selectKey - ==>  Executing: SELECT LAST_INSERT_ID() 
+17:14:43.462 DEBUG c.w.k.w.m.C.insertSelective!selectKey - <==      Total: 1
+17:14:43.464 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET total_freight = ?,coverage = ?,premium = ? WHERE id = ? 
+17:14:43.468 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 1(BigDecimal), 12(BigDecimal), 12(BigDecimal), 30(Integer)
+17:14:43.494 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:14:43.834 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:14:43.834 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:14:43.836 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:14:43.837 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:14:43.837 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:14:43.838 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:14:53.447 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+17:14:53.447 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3539(Integer), 25(BigDecimal), 1(BigDecimal), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), 1(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 东立自有车辆(String), 1(String), 1(String), 1(String), 沪1(String), 30(Integer)
+17:14:53.522 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:14:53.826 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:14:53.827 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:14:53.828 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:14:53.829 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:14:53.829 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:14:53.830 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:15:53.922 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:15:53.922 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:15:53.929 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:15:53.931 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:15:53.931 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:15:53.932 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:17:11.997 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:17:11.997 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:17:11.999 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:17:12.001 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:17:12.001 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:17:12.002 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:17:14.333 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:17:14.333 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:17:14.344 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:17:14.350 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:17:14.351 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:17:14.352 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:17:16.824 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET carriage_id = ?,total_payments = ?,prepayment = ?,prepayment_cash = ?,prepayment_oil_card = ?,total_receipt = ?,receipt_cash = ?,receipt_oil_card = ?,fad_payment = ?,month_balance = ?,coolie_hire = ?,other = ?,carriage_company = ?,driver_name = ?,driver_tel = ?,driver_card = ?,plate_number = ? WHERE id = ? 
+17:17:16.825 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 3539(Integer), 25(BigDecimal), 1(BigDecimal), 1(BigDecimal), 0(BigDecimal), 1(BigDecimal), 1(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 0(BigDecimal), 东立自有车辆(String), 1(String), 1(String), 1(String), 沪1(String), 30(Integer)
+17:17:16.878 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:17:17.187 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:17:17.187 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:17:17.189 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:17:17.190 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:17:17.190 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:17:17.191 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:17:20.876 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:17:20.877 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:17:20.888 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:17:20.889 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:17:20.889 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:17:20.890 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:17:21.304 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET isrefer = ?,orderNo = ? WHERE id = ? 
+17:17:21.304 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 1(Integer), 40170716480006622272(String), 30(Integer)
+17:17:21.353 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:17:52.728 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:17:52.728 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:17:52.730 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:17:52.744 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:17:52.745 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:17:52.747 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:17:54.865 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:17:54.865 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:17:54.866 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:17:54.868 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:17:54.868 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:17:54.868 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:17:57.681 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:17:57.681 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:17:57.682 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:17:57.683 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:17:57.683 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:17:57.689 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:17:58.143 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==>  Preparing: UPDATE orderm SET isrefer = ?,orderNo = ? WHERE id = ? 
+17:17:58.143 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - ==> Parameters: 1(Integer), 40170716480006622289(String), 30(Integer)
+17:17:58.217 DEBUG c.w.k.w.m.O.updateByPrimaryKeySelective - <==    Updates: 1
+17:18:00.683 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:18:00.684 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:18:00.685 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:18:03.468 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:18:03.469 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 1(Integer)
+17:18:03.471 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 2
+17:18:06.000 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:18:06.002 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 30(Integer)
+17:18:06.003 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:18:06.005 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:18:06.005 DEBUG c.w.k.w.m.C.select - ==> Parameters: 30(Integer)
+17:18:06.006 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:18:23.393 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:18:23.393 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 1(Integer)
+17:18:23.398 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 2
+17:18:24.911 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE id = ? 
+17:18:24.911 DEBUG c.w.k.w.m.O.selectByPrimaryKey - ==> Parameters: 31(Integer)
+17:18:24.912 DEBUG c.w.k.w.m.O.selectByPrimaryKey - <==      Total: 1
+17:18:24.914 DEBUG c.w.k.w.m.C.select - ==>  Preparing: SELECT id,order_id,cargo_name,count,unit,freight_unit FROM cargoinformation WHERE order_id = ? 
+17:18:24.914 DEBUG c.w.k.w.m.C.select - ==> Parameters: 31(Integer)
+17:18:24.915 DEBUG c.w.k.w.m.C.select - <==      Total: 1
+17:18:30.967 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==>  Preparing: SELECT id,rec_person,openid,carriage_id,isrefer,create_time,rec_tel,rec_unit_name,rec_province_id,rec_province,rec_city_id,rec_city,rec_area_id,rec_area,rec_detail_adress,rec_mode,mail_person,mail_tel,mail_unit_name,mail_province_id,mail_province,mail_city_id,mail_city,mail_area_id,mail_area,mail_detail_adress,mail_time,arrive_time,receipt,total_freight,coverage,premium,total_payments,prepayment,prepayment_cash,prepayment_oil_card,total_receipt,receipt_cash,receipt_oil_card,fad_payment,month_balance,coolie_hire,other,carriage_company,driver_name,driver_tel,driver_card,plate_number,orderNo FROM orderm WHERE openid = ? AND isrefer = ? 
+17:18:30.967 DEBUG c.w.k.w.mapper.OrdermMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String), 1(Integer)
+17:18:30.971 DEBUG c.w.k.w.mapper.OrdermMapper.select - <==      Total: 2
+17:18:32.773 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:18:32.774 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:18:32.775 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:18:35.799 DEBUG c.w.k.w.mapper.MemberMapper.select - ==>  Preparing: SELECT id,member_no,openid,head_img_url,nick_name,telphone,member_type,member_company,member_name,create_time FROM member WHERE openid = ? 
+17:18:35.799 DEBUG c.w.k.w.mapper.MemberMapper.select - ==> Parameters: oVg3v1NVKsE6trCt4B6hoD7vBehE(String)
+17:18:35.800 DEBUG c.w.k.w.mapper.MemberMapper.select - <==      Total: 1
+17:18:43.003 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==>  Preparing: SELECT id,sys_user_id,mch_id,appid,ghid,secret,auth_url,token,encoding_aes_key,nick_name,head_img,sub_qr,auth_scope,component_authorize_url,component_authorize_openid_url,service_type_info FROM wechat_mps WHERE id = ? 
+17:18:43.003 DEBUG c.w.c.w.m.W.selectByPrimaryKey - ==> Parameters: 8(Integer)
+17:18:43.018 DEBUG c.w.c.w.m.W.selectByPrimaryKey - <==      Total: 1

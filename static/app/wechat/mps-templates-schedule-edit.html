@@ -1,0 +1,319 @@
+
+
+<div class="row">
+    <div class="top-handle-btn">
+        <!--search-form-->
+
+        <!--顶部提示信息-->
+        <div class="note note-success">
+            <p> 模板ID编号所属的行业必须和公众号相匹配，否则将创建失败。<a target="_blank" href='https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1433751288'>查看详情</a>                </p>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div id="modals">
+        <div class="modal fade" id="modal-view" tabindex="-1" role="basic" aria-hidden="true">
+            <div class="modal-dialog" style="width:375px">
+                <div class="modal-content" style="text-align: center">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">预览</h4>
+                    </div>
+                    <div class="modal-body" style="text-align:left">
+                        <p class="tmp-msg-head" style="font-size:20px"></p>
+                        <p class="tmp-msg-date" style="color: #999;font-size: 12px;"></p>
+                        <hr class="tmp-msg-split">
+                        <p class="tmp-msg-link">Details</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn dark btn-outline radius6" data-dismiss="modal"><i
+                                        class="fa fa-close"></i> 关闭
+                                </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="tmp-fm" action="javascript:" method="POST">
+    <div class="row">
+        <table class="table table-striped table-bordered table-hover" width="100%">
+            <tr>
+                <th>模板编号</th>
+                <td><input type="hidden" name="templateShortId" /><span name="templateShortId"></span></td>
+            </tr>
+            <tr>
+                <th>模板标题</th>
+                <td><input type="hidden" name="templateName" /> <span name="templateName"></span></td>
+            </tr>
+            <tr>
+                <th>消息说明</th>
+                <td><input type="hidden" name="remark" /> <span name="remark"></span> </td>
+            </tr>
+            <tr>
+                <th>消息链接</th>
+                <td> <input type="text" class=" input-medium form-control inline" name="detailHref" placeholder="http://example.com/"
+                    /></td>
+            </tr>
+            <tr id="send-at-tr">
+                <th>发送时间</th>
+                <td>
+                    <div class="input-group date  form_datetime " style="float: left">
+                        <input type="text" size="16" name="sendAt" class="form-control input-medium inline" />
+                        <span class="input-group-btn">
+                                                                        <button class="btn default date-set" type="button">
+                                                                            <i class="fa fa-calendar"></i>
+                                                                        </button>
+                                                                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>选择公众号</th>
+                <td>
+                    <select name="mpid" onchange="setMpName(this)" class=" input-medium form-control inline ">
+                                    <option value="">-- 请选择推送公众号 --</option>
+                                </select>
+                    <input type="hidden" name="mpName" />
+                </td>
+            </tr>
+            <tr>
+                <th>推送对象</th>
+                <td>
+                    <label class="mt-radio"><input type="radio" name="pushType" value="20005"/><span></span>全部粉丝</label>
+                    <label class="mt-radio"> <input type="radio" name="pushType" value="20006"/><span></span> 48小时内活跃粉丝</label>
+                </td>
+            </tr>
+            <tr>
+                <th>详细内容</th>
+                <td>
+                    <textarea readonly name="detail" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <div class="row">
+        <table id="decode-tb" class="table table-striped table-bordered table-hover" width="100%">
+        </table>
+        <button type="button" class="btn green right  radius6" onclick="save()"><i class="fa fa-save"></i> 保存任务</button>
+        <a type="button" class="btn red right  radius6" href="#modal-view" data-toggle="modal" onclick="preview()"><i class="fa fa-eye"></i> 预览</a>
+        <button type="button" class="btn dark btn-outline radius6" onclick="javascript:backToTemp()"><i class="fa fa-close"></i> 关闭 </button>
+    </div>
+</form>
+
+
+
+<script type="text/javascript">
+    var id = sessionStorage.getItem("tmpId");
+    var scheduleId = sessionStorage.getItem("tmpScdId");
+    var isCreate = true;
+
+    //创建
+    var url;
+    if (id != null && id != "" && id != "undefined" && id != "null") {
+        sessionStorage.removeItem("tmpId");
+        url = "/template-msg/";
+        isCreate = true;
+    }
+
+    //修改
+    else if (scheduleId != null && scheduleId != "" && scheduleId != "undefined" && scheduleId != "null") {
+
+        sessionStorage.removeItem("tmpScdId");
+        url = "/template-schedule/";
+        isCreate = false;
+    }
+
+    if (id == null) {
+        id = scheduleId;
+    }
+
+    function loadData() {
+        Shinez.get(url + id, function (ret) {
+            if (ret.code == 0) {
+                var obj = ret.data.wechatTemplate;
+                $.each(obj, function (k, v) {
+                    $("*[name=" + k + "]").val(v);
+                    if (k != "mpid") {
+                        $("*[name=" + k + "]").html(v);
+                    }
+                });
+                if (obj.detailList != null && obj.detailList.length > 0) {
+                    for (var i = 0; i < obj.detailList.length; ++i) {
+                        $("#decode-tb").append('<tr><th>' + obj.detailList[i].fieldName + '</th>' +
+                            '<td><input type="hidden" name="detailId" value="' + obj.detailList[i].id +'" />'+
+                            '<input type="hidden" name="fieldName" value="' + obj.detailList[i].fieldName +'" />'+
+                            '<textarea style="position:relative;top:12px" class=" input-medium form-control inline" name="fieldValue">'+(obj.detailList[i].fieldValue==null?" ":obj.detailList[i].fieldValue)+'</textarea>'+
+                            '<input  class="input-small form-control inline" style="height:52px;width: 64px !important;" name="fieldColor" value="'+obj.detailList[i].fieldColor+'" type="color"/></td></tr>'
+                        );
+
+                    }
+                }
+                checkTextArea()
+            }
+        })
+    }
+
+    function loadMpInfo() {
+        Shinez.get("/mps", function (ret) {
+            if (ret.code == 0) {
+                var mpInfos = ret.data.page.list;
+                mpInfos.forEach(function (v) {
+                    $("*[name=mpid]").append('<option value="' + v.id + '">' + v.nickName + '</option>');
+                });
+                loadData()
+                registerDateTimePickerPlugin()
+
+            }
+        });
+    }
+
+
+    function registerDateTimePickerPlugin() {
+        $(".form_datetime").datetimepicker({
+            format: "yyyy-mm-dd hh:ii",
+            language: 'zh-CN',
+            autoclose: 1,
+            todayBtn: 1
+        });
+    }
+
+    function setMpName(obj) {
+        $("input[name=mpName]").val($(obj).find("option[value=" + $(obj).val() + "]").html());
+    }
+
+
+    function backToTemp() {
+        if (isCreate) {
+            loadHtml("/base/mps-templates");
+        } else {
+            loadHtml("/base/mps-templates-schedule");
+        }
+    }
+
+    function save() {
+        var obj = $("#tmp-fm").serializeObject();
+        if (obj.fieldName == null) {
+            Shinez.tip("error", "请填写必要信息");
+        }
+        var detailList = [];
+        for (var i = 0; i < obj.fieldName.length; i++) {
+            detailList.push({
+                id: obj.detailId == null ? null : obj.detailId[i],
+                fieldName: obj.fieldName[i],
+                fieldValue: obj.fieldValue[i],
+                fieldColor: obj.fieldColor[i],
+            });
+        }
+        obj.detailList = detailList;
+        console.log(obj);
+
+        if (isCreate) {
+            Shinez.xhr("POST", "/template-schedule", JSON.stringify(obj), true, function (ret) {
+                if (ret.code == 0) {
+                    Shinez.tip("success", "创建任务成功");
+                    backToTemp();
+                }
+                if (ret.code == -1) {
+                    Shinez.tip("error", ret.msg);
+                }
+            }, "json", "application/json")
+        } else {
+            obj.id = scheduleId;
+            Shinez.xhr("PUT", "/template-schedule/" + id, JSON.stringify(obj), true, function (ret) {
+                if (ret.code == 0) {
+                    Shinez.tip("success", "保存成功");
+                    backToTemp();
+                }
+                if (ret.code == -1) {
+                    Shinez.tip("error", ret.msg);
+                }
+            }, "json", "application/json")
+
+        }
+
+
+
+    }
+
+
+
+    $(function () {
+        loadMpInfo()
+    })
+
+    function checkTextArea(){
+        debugger;
+        $("textarea").unbind("blur").on("blur",function(){
+            if($(this).val()==""){
+            $(this).val(" ");
+        }
+        });
+        
+    }
+
+    function preview() {
+        $(".tmp-msg-content").remove();
+        var head = $("*[name=templateName]").val();
+        $(".tmp-msg-head").html(head);
+        var sendDate = $("*[name=sendAt]").val();
+        $(".tmp-msg-date").html(Shinez.FormateDate(new Date(sendDate), "M-d"));
+        var obj = $("#tmp-fm").serializeObject();
+        var detailList = [];
+        for (var i = 0; i < obj.fieldName.length; i++) {
+            detailList.push({
+                id: obj.detailId == null ? null : obj.detailId[i],
+                fieldName: obj.fieldName[i],
+                fieldValue: obj.fieldValue[i],
+                fieldColor: obj.fieldColor[i],
+            });
+        }
+
+        var srcContent = $("*[name=detail]").val().split("\n");
+        srcContent.forEach(function (v, k) {
+            if (v == "") srcContent.splice(k, 1);
+        });
+        debugger
+        for (var fieldIndex = 0; fieldIndex < srcContent.length; ++fieldIndex) {
+
+            var $p = $("<p style='margin:0;' class='tmp-msg-content'>" + srcContent[fieldIndex] + "</p>");
+
+            var contentArr  = detailList[fieldIndex].fieldValue.split("\n");
+            var content = "";
+            if(contentArr.length>1){
+                for(var contentIndex = 0;contentIndex<contentArr.length;++contentIndex){
+                    if(contentIndex==contentArr.length-1){
+                        content+=(contentArr[contentIndex]);
+                        break;
+                    }
+                    content+=(contentArr[contentIndex])+"</br>";
+                }
+            }else if(contentArr.length==1){
+                content = contentArr[0];
+            }
+            $p.html($p.html().replace("{{" + detailList[fieldIndex].fieldName + "}}","<span class='tmp-msg-content-c'>" + content + "</span>"));
+            $p.find("span").css("color", detailList[fieldIndex].fieldColor);
+            $p.insertBefore($(".tmp-msg-split"));
+        }
+
+        var href = $("*[name=detailHref]").val();
+        if (href != "") {
+            $(".tmp-msg-link").css("display","");
+            $(".tmp-msg-link").html("<a target='_blank' href='" + href + "'>Details</a>");
+        }else{
+            $(".tmp-msg-link").css("display","none");
+        }
+
+
+
+
+    }
+</script>

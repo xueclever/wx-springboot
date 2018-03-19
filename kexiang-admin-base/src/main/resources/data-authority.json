@@ -1,0 +1,9 @@
+[
+  {
+    "roleName": "按公众号",
+    "dataRoleCode": "BY_MP_ID",
+    "columnName": "id",
+    "level":1,
+    "prefixName":"wechatMps"
+  }
+]

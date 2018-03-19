@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>创建运单 step 2</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.1.3/weui.min.js"></script>
+    <script type="text/javascript" src="js/config/config.js"></script>
+    <script type="text/javascript" src="js/config/wechat-handler.js"></script>
+    <script src="js/jquery.cityselect.js"></script>
+    <script src="js/util/jquery-serialize-json.js"></script>
+</head>
+<body>
+<div class="scroller">
+
+    <form action="javascript:">
+        <div class="setup">
+            <h3>货物信息</h3>
+            <div class="addmsg">
+
+            </div>
+            <div class="add">
+                <img src="images/add.png" width="100%">增加货物信息
+            </div>
+        </div>
+        <div class="setup">
+            <h3>运费合计<span id="totalFreight">¥6000.00</span></h3>
+            <input type="hidden" name="totalFreight" value="0">
+            <label>
+                <span>投保额度</span>
+                <div class="right">
+                    <input type="number" name="coverage" placeholder="¥ 请输入投保额度" class="input">
+                </div>
+            </label>
+            <label>
+                <span>保险费</span>
+                <div class="right">
+                    <input type="number" name="premium" placeholder="¥ 请输入保险费" class="input">
+                </div>
+            </label>
+        </div>
+        <div class="setupbtn">
+            <button class="back">后 退</button>
+            <button class="next" onclick="create()">下一步</button>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="js/util/async-request.js"></script>
+<script type="text/javascript">
+
+    var id = getQueryString("id");
+
+    function init() {
+        if (id == null) {
+            weui.alert('无法获取运单信息', function () {
+                history.go(-1);
+            });
+        } else {
+            loadCache(id);
+        }
+
+    }
+
+    init();
+
+    function loadCache(id) {
+        var reqconfig = new ReqConfig(true, "载入中", true);
+        req.setConfig(reqconfig);
+        req.get("/order/detailbase?id=" + id, function (ret) {
+            console.log(ret);
+
+            var orderDetail = ret.data.orderm;
+            var cargList = ret.data.cargoinformationLt;
+
+            if (orderDetail != null) {
+
+                $.each(orderDetail, function (k, v) {
+                    var element = document.querySelector("*[name=" + k + "]");
+                    if (k === "totalFreight") {
+                        document.querySelector("#totalFreight").innerHTML = "￥" + v;
+                        return true;
+                    }
+                    if (element != null) {
+                        element.value = v;
+                        $(element).change();
+                    }
+                });
+            }
+            if (cargList != null &&cargList.length > 0) {
+                $.each(cargList, function (k, v) {
+                    appendBlock(v);
+                });
+            } else {
+                appendBlock()
+            }
+            calcFeight();
+        });
+    }
+
+
+    $('.back').click(function () {
+        window.location.href = "创建运单.html?id=" + id;
+    })
+    $('.add').click(function () {
+        appendBlock();
+    })
+
+    function appendBlock(data) {
+
+        function getVal(o, k) {
+            if (o == null) {
+                return "";
+            }
+            return o[k];
+        }
+
+        function getSelect(o, k, val) {
+            if (o == null) {
+                return "";
+            }
+            return val == o[k] ? "selected" : "";
+        }
+
+        $('.addmsg').append('<div class="block">' +
+            '<label><span>货物名称</span><div class="right"><input type="text" value="' + getVal(data, "cargoName") + '" name="cargoName" placeholder="请输入货物名称"  class="input"></div></label>' +
+            '<label><span>数量</span><div class="right"><input type="number" value="' + getVal(data, "count") + '" onblur="calcFeight()" placeholder="请输入数量"  name="count" class="input"></div></label>' +
+            '<label><span>单位</span><div class="right">' +
+            '<select name="unit" >' +
+            '<option value="" ' + getSelect(data, "unit", "") + '>请选择单位</option>' +
+            '<option value="1"  ' + getSelect(data, "unit", 1) + '>件</option>' +
+            '<option value="2" ' + getSelect(data, "unit", 2) + '>克</option>' +
+            '<option value="3" ' + getSelect(data, "unit", 3) + '>立方毫米</option>' +
+            '</select> </div></label>' +
+            '<label><span>运费单价</span><div class="right"><input type="number"  value="' + getVal(data, "freightUnit") + '" name="freightUnit" placeholder="¥ 请输入运费单价"  onblur="calcFeight()" class="input"></div></label>' +
+            '</div>')
+    }
+
+    function create() {
+        var reqconfig = new ReqConfig(true, "正在保存", true);
+        var obj = $("form").serializeObject();
+        obj.id = parseInt(id);
+        console.log(obj);
+        req.setConfig(reqconfig);
+
+        var list = [];
+        var length =$(".block").length;
+        for (var i = 0; i < length; ++i) {
+            if(length>1) {
+                list.push({
+                    cargoName: obj.cargoName[i],
+                    count: obj.count[i],
+                    freightUnit: obj.freightUnit[i],
+                    unit: obj.unit[i]
+                });
+            }else{
+                list.push({
+                    cargoName: obj.cargoName,
+                    count: obj.count,
+                    freightUnit: obj.freightUnit,
+                    unit: obj.unit
+                });
+            }
+        }
+        obj.list = list;
+        req.post("/order/editorder", JSON.stringify(obj), function (ret) {
+            console.log(ret);
+            if (ret.code === SUCCESS) {
+                window.location.href = "创建运单3.html?id=" + (id == null ? ret.data.orderId : id);
+            } else {
+                if (ret.code === FAIL) {
+                    weui.alert(ret.msg);
+                }
+            }
+        })
+
+
+    }
+
+    function calcFeight() {
+        var freight = 0;
+        $.each($(".block"), function (k, v) {
+            freight += parseFloat($(v).find("input[name=freightUnit]").val()) * parseInt($(v).find("input[name=count]").val());
+            freight = parseFloat(freight.toFixed(2));
+            if (isNaN(freight)) {
+                $("#totalFreight").html("");
+            } else {
+                $("#totalFreight").html("￥" + freight);
+            }
+            $("input[name=totalFreight]").val(freight);
+        })
+
+    }
+
+</script>
+
+
+</body>
+</html>

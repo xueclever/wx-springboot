@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wmeimob.custom.system.mapper.CityInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.wmeimob.custom.system.entity.CityInfo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="pid" property="pid" jdbcType="INTEGER" />
+  </resultMap>
+
+
+  <resultMap id="TreeMap" type="com.wmeimob.custom.system.entity.CityInfo" extends="BaseResultMap" >
+    <collection property="children" column="id" ofType="com.wmeimob.custom.system.entity.CityInfo" select="selectByParentId"/>
+  </resultMap>
+
+</mapper>

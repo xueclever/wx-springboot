@@ -1,0 +1,67 @@
+<div id="modals">
+
+    <!--modals-->
+</div>
+<div class="row">
+    <div class="top-handle-btn">
+        <!--search-form-->
+
+        <!--顶部提示信息-->
+        <div class="note note-success">
+            <p> 向活跃粉丝发送普通文本消息，活跃粉丝定义为 <span style="color: red">48小时内 </span>与公众号互动的粉丝 </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <!--main-content-->
+
+    <form id="send-form" action="javascript:">
+        <textarea name="content" cols="30" rows="10"></textarea>
+        <p>
+            <select name="mpid" class=" input-medium form-control inline ">
+                <option value="">-- 请选择要发送的公众号 --</option>
+            </select>
+        </p>
+    </form>
+
+    <button type="button" class="btn green right  radius6" onclick="send()"><i class="fa fa-save"></i> 发送</button>
+    <button type="button" class="btn dark btn-outline radius6" onclick="javascript:backToTemp()"><i
+            class="fa fa-close"></i> 关闭
+    </button>
+</div>
+
+<!--table-data-loader-->
+<script type="text/javascript">
+
+    $(function () {
+        loadMps();
+    })
+
+    function loadMps() {
+        Shinez.get("/mps", function (ret) {
+            if (ret.code == 0) {
+                var mps = ret.data.page.list;
+                $.each(mps, function (k, v) {
+                    $("*select[name=mpid]").append("<option value='" + v.id + "'>" + v.nickName + "</option>");
+                })
+            }
+        })
+    }
+
+    function send() {
+        var mpid = $("*[name=mpid]").val();
+        if(mpid==""){
+            Shinez.tip("warning","请选择公众号")
+            return;
+        }
+        Shinez.post("/mps/" + mpid + "/msg", $("#send-form").serialize(), function (ret) {
+            if (ret.code === 0) {
+                Shinez.tip("success", "发送成功");
+            }else{
+                Shinez.tip("error",ret.msg)
+            }
+        })
+    }
+</script>

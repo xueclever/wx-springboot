@@ -1,0 +1,57 @@
+[
+  {
+    "icon": "icon-settings",
+    "menuName": "权限",
+    "id": 87570,
+    "parentId": 0,
+    "sysMenus": [
+      {
+        "menuHref": "/base/sys-role",
+        "icon": "fa fa-user-secret",
+        "menuName": "角色分配",
+        "id": 83548,
+        "parentId": 87570
+      },
+      {
+        "menuHref": "/base/sys-user",
+        "icon": "fa fa-users",
+        "menuName": "账号管理",
+        "id": 36256,
+        "parentId": 87570
+      },
+      {
+        "menuHref": "/base/sys-menu",
+        "icon": "fa fa-folder",
+        "menuName": "菜单管理",
+        "id": 75724,
+        "parentId": 87570,
+        "excludeRole": "SUPER"
+      },
+      {
+        "menuHref": "/base/sys-resource",
+        "icon": "fa fa-database",
+        "menuName": "资源管理",
+        "id": 75729,
+        "parentId": 87570
+      }
+    ]
+  },
+  {
+    "menuHref": "",
+    "icon": "fa fa-weixin",
+    "menuName": "公众号",
+    "id": 90000,
+    "parentId": 0,
+    "excludeRole": "SUPER",
+    "sysMenus": [
+      {
+        "menuHref": "/wechat/mps",
+        "icon": "fa fa-weixin",
+        "menuName": "公众号设置",
+        "id": 85114,
+        "parentId": 90000,
+        "excludeRole": "SUPER"
+      }
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+mvn install:install-file  -Dfile=wmeimob-custom-starter-1.0.BETA.jar -DgroupId=com.wmeimob -DartifactId=custom-starter -Dversion=1.0.BETA -Dpackaging=jar
+mvn install:install-file  -Dfile=aliyun-java-sdk-core-3.2.3.jar -DgroupId=com.aliyun -DartifactId=aliyun-java-sdk-core -Dversion=3.2.3 -Dpackaging=jar
+mvn install:install-file  -Dfile=aliyun-java-sdk-dysmsapi-1.0.0-SANPSHOT.jar -DgroupId=com.aliyun -DartifactId=aliyun-java-sdk-dysmsapi -Dversion=1.0.0-SANPSHOT -Dpackaging=jar
+mvn install:install-file  -Dfile=aes-jre1.6.jar -DgroupId=com.qq.weixin -DartifactId=aes-jre -Dversion=1.6 -Dpackaging=jar

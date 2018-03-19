@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>提交运单</title>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.1.3/weui.min.js"></script>
+    <script type="text/javascript" src="js/config/config.js"></script>
+    <script type="text/javascript" src="js/config/wechat-handler.js"></script>
+    <script src="js/util/dateformat-util.js"></script>
+</head>
+<body>
+<div class="scroller">
+    <div class="detail-order">
+        <!-- h2>运单编号<span id="orderno">ZX19234002</span></h2 -->
+        <p>创建时间<span id="createTime">2018-10-10 11:10:10</span></p>
+    </div>
+    <div class="detail-mes">
+        <h2><span><img src="images/shou.png" width="100%">收件方</span><span id="recMode">直达</span></h2>
+        <p><span><img src="images/a1.png" width="100%"><span id="recPerson">可爱又迷人的反派角色</span></span><span><img
+                src="images/a2.png" width="100%"><span id="recTel">18714971712</span></span>
+        </p>
+        <p><span><img src="images/a16.png" width="100%"><span id="recUnitName">上海美盟软件科技有限公司</span></span></p>
+        <p><span><img src="images/a3.png" width="100%"><span id="recProvince">上海</span><span
+                id="recCity">上海市</span><span id="recArea"></span><span
+                id="recDetailAdress">逸仙路8888弄100号505</span></span></p>
+    </div>
+    <div class="detail-mes">
+        <h2><span style="color: #6896F3"><img src="images/fa.png" width="100%">发件方</span><span style="color: #6896F3">回单份数 <span
+                id="receipt">2</span></span>
+        </h2>
+        <p><span><img src="images/a21.png" width="100%"><span id="mailPerson">可爱又迷人的反派角色</span></span><span><img
+                src="images/a17.png" width="100%"><span id="mailTel">18714971712</span></span>
+        </p>
+        <p><span><img src="images/a18.png" width="100%"><span id="mailUnitName">上海美盟软件科技有限公司</span></span></p>
+        <p><span><img src="images/a19.png" width="100%"><span id="mailProvince"></span><span id="mailCity"></span><span
+                id="mailArea"></span><span id="mailDetailAdress"></span></span></p>
+        <p><span><img src="images/a20.png" width="100%">发货日期：<span
+                id="mailTime">2018.10.11</span></span><span>预计到达：<span id="arriveTime">2018.10.14</span></span></p>
+    </div>
+    <div class="goods-mes">
+        <h2 id="part-before">货物信息</h2>
+
+
+        <div class="freight">
+            <h3>运费合计<span>¥<span id="totalFreight">6000.00</span></span></h3>
+            <p>投保额度<span>¥<span id="coverage">0.00</span></span></p>
+            <p>保险额度<span>¥<span id="premium">0.00</span></span></p>
+        </div>
+        <div class="freight">
+            <h3>付款总额<span>¥<span id="totalPayments">6000.00</span></span></h3>
+            <p class="bold">预付款<em>¥<em id="prepayment">0.00</em></em></p>
+            <p>现金<em>¥<em id="prepaymentCash">0.00</em></em></p>
+            <p>油卡<em>¥<em id="prepaymentOilCard">0.00</em></em></p>
+            <p class="bold">回单付<em>¥<em id="totalReceipt">0.00</em></em></p>
+            <p>现金<em>¥<em id="receiptCash">0.00</em></em></p>
+            <p>油卡<em>¥<em id="receiptOilCard">0.00</em></em></p>
+            <p>到付<em>¥<em id="fadPayment">0.00</em></em></p>
+            <p>月结<em>¥<em id="monthBalance">0.00</em></em></p>
+            <p>装卸费<em>¥<em id="coolieHire">0.00</em></em></p>
+            <p>其他<em>¥<em id="other">0.00</em></em></p>
+        </div>
+
+    </div>
+    <div class="detail-mes">
+        <h3>承运信息</h3>
+        <p><span><img src="images/a22.png" width="100%">车牌：<span id="plateNumber"></span></span><span><img
+                src="images/a2.png" width="100%"><span id="driverTel"></span></span>
+        </p>
+        <p><span><img src="images/a1.png" width="100%"><span id="driverName"></span></span><span>身份证：<span
+                id="driverCard"></span></span></p>
+        <p><span><img src="images/a23.png" width="100%"><span id="carriageCompany"></span></span></p>
+    </div>
+    <div class="setupbtn">
+        <button class="back" style="background: #858585">修改</button>
+        <button class="next">提交</button>
+    </div>
+    <div class="submitBox">
+        <div class="submitBoxcon">
+            <h2>是否确认无误并提交?</h2>
+            <div class="button">
+                <button class="cancel">取消</button>
+                <button onclick="submit()">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/util/async-request.js"></script>
+<script type="text/javascript">
+    var id = getQueryString("id");
+    $('.back').click(function () {
+        window.location.href = "创建运单.html?id="+id;
+    })
+    $('.next').click(function () {
+        $('.submitBox').fadeIn()
+    })
+    $('.cancel').click(function () {
+        $('.submitBox').fadeOut()
+    })
+</script>
+</body>
+
+
+<script>
+    var id = getQueryString("id");
+    var block = '   <div class="mes-part1">\n' +
+        '            <p id="cargoName">{cargoName}</p>\n' +
+        '            <p>{count}{unit}<span>运费单价：￥<span id="freightUnit">{freightUnit}</span></span></p>\n' +
+        '        </div>';
+
+    function init() {
+        if (id == null) {
+            weui.alert('无法获取运单信息', function () {
+                history.go(-1);
+            });
+        } else {
+            loadCache(id);
+        }
+    }
+
+    function loadCache(id) {
+        var reqconfig = new ReqConfig(true, "载入中", true);
+        req.setConfig(reqconfig);
+        req.get("/order/detailbase?id=" + id, function (ret) {
+            console.log(ret);
+            var orderDetail = ret.data.orderm;
+            var cargList = ret.data.cargoinformationLt;
+
+            if (orderDetail != null) {
+                $.each(orderDetail, function (k, v) {
+                    var element = document.querySelector("*[id=" + k + "]");
+                    if (k.indexOf("Time") != -1) {
+                        v = formatDate(new Date(v), "yyyy-MM-dd")
+                    }
+                    if (k === "recMode") {
+                        if (v == 1) {
+                            v = "直送"
+                        }
+                        if (v == 0) {
+                            v = "自提"
+                        }
+                    }
+                    if (element != null) {
+                        element.innerHTML = v;
+                    }
+                });
+            }
+            if (cargList != null && cargList.length > 0) {
+                $.each(cargList, function (k, v) {
+                    appendBlock(v);
+                });
+            }
+        });
+    }
+
+    function appendBlock(data) {
+        var temp = block;
+        $.each(data, function (k, v) {
+            if(k==="unit"){
+                if(v==1){
+                    v="件"
+                }
+                if(v==2){
+                    v="吨"
+                }
+                if(v==3){
+                    v="立方"
+                }
+            }
+            temp = temp.replace("{" + k + "}", v);
+        })
+        $("#part-before").after(temp);
+    }
+
+    init();
+
+    function submit() {
+        var reqconfig = new ReqConfig(true, "正在保存", true);
+        req.setConfig(reqconfig);
+        req.put("/order/"+id,null,function (ret) {
+            if(ret.code===SUCCESS){
+                location.href="提交成功.html?orderNo="+ret.data.orderNo;
+            }else{
+                console.error(ret.msg)
+                weui.alert(ret.msg);
+            }
+        })
+    }
+</script>
+</html>

@@ -1,0 +1,7 @@
+
+description = 'custom-dao'
+dependencies {
+  compile project(':custom-tool')
+    compile group: 'org.mybatis', name: 'mybatis', version:'3.4.0'
+  compile project(':custom-kernel')
+}

@@ -1,0 +1,84 @@
+16:01:02.434 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - ==>  Preparing: SELECT id,role_code,role_name,role_type,is_enable,updated_at,created_at,created_role,created_user FROM sys_role 
+16:01:02.451 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - ==> Parameters: 
+16:01:02.487 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - <==      Total: 4
+16:01:02.489 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+16:01:02.490 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 1(Integer)
+16:01:02.521 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 2
+16:01:02.522 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+16:01:02.522 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 5(Integer)
+16:01:02.523 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 1
+16:01:02.524 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+16:01:02.524 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 6(Integer)
+16:01:02.525 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 0
+16:01:02.526 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+16:01:02.526 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 7(Integer)
+16:01:02.527 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 0
+16:01:02.779 DEBUG c.w.c.s.m.S.selectByExample - ==>  Preparing: SELECT id,resource_name,resource_url,query_string,updated_at,created_at FROM sys_resource 
+16:01:02.779 DEBUG c.w.c.s.m.S.selectByExample - ==> Parameters: 
+16:01:02.783 DEBUG c.w.c.s.m.S.selectByExample - <==      Total: 22
+16:01:03.075 DEBUG c.w.c.s.m.D.selectAll - ==>  Preparing: SELECT id,dict_name,description FROM data_dictionary 
+16:01:03.075 DEBUG c.w.c.s.m.D.selectAll - ==> Parameters: 
+16:01:03.132 DEBUG c.w.c.s.m.D.selectAll - <==      Total: 20
+16:01:03.447 DEBUG c.w.c.w.m.W.selectForDataRole - ==>  Preparing: SELECT id,nick_name FROM wechat_mps 
+16:01:03.447 DEBUG c.w.c.w.m.W.selectForDataRole - ==> Parameters: 
+16:01:03.648 DEBUG c.w.c.w.m.W.selectForDataRole - <==      Total: 2
+16:01:03.740 DEBUG c.w.c.s.m.S.selectOne - ==>  Preparing: SELECT id,config_name,config_value,config_type FROM simple_config WHERE config_name = ? 
+16:01:03.741 DEBUG c.w.c.s.m.S.selectOne - ==> Parameters: jwt-secret(String)
+16:01:03.753 DEBUG c.w.c.s.m.S.selectOne - <==      Total: 1
+16:03:29.360 DEBUG c.w.c.s.m.SysUserMapper.selectOne - ==>  Preparing: SELECT id,username,nickname,pwd,salt,tel,user_type,role_id,role_name,is_enabled,is_locked,created_user,enable_data_role,created_at,last_login_date,last_login_ip FROM sys_user WHERE username = ? AND pwd = ? 
+16:03:29.361 DEBUG c.w.c.s.m.SysUserMapper.selectOne - ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+16:03:29.463 DEBUG c.w.c.s.m.SysUserMapper.selectOne - <==      Total: 1
+16:03:29.464 DEBUG c.w.c.s.m.S.selectByPrimaryKey - ==>  Preparing: SELECT id,role_code,role_name,role_type,is_enable,updated_at,created_at,created_role,created_user FROM sys_role WHERE id = ? 
+16:03:29.464 DEBUG c.w.c.s.m.S.selectByPrimaryKey - ==> Parameters: 1(Integer)
+16:03:29.465 DEBUG c.w.c.s.m.S.selectByPrimaryKey - <==      Total: 1
+16:03:29.468 DEBUG c.w.c.s.m.S.select - ==>  Preparing: SELECT id,sys_user_id,prefix_name,column_name,column_value,data_role_code,extends_user FROM sys_user_data_role WHERE sys_user_id = ? 
+16:03:29.468 DEBUG c.w.c.s.m.S.select - ==> Parameters: 1(Integer)
+16:03:29.489 DEBUG c.w.c.s.m.S.select - <==      Total: 1
+16:03:29.667 DEBUG c.w.c.s.m.SysMenuMapper.selectMenus - ==>  Preparing: SELECT menu2.*, menu.id id1, menu.parent_id parent_id1, menu.icon icon1, menu.menu_code menu_code1, menu.menu_name menu_name1, menu.menu_describe menu_describe1, menu.menu_href menu_href1, menu.query_string query_string1, menu.created_at created_at1, menu.updated_at updated_at1, menu.order_no order_no1 FROM sys_menu menu INNER JOIN sys_menu_role mr ON mr.menu_id = menu.id LEFT JOIN sys_menu menu2 ON menu2.id = menu.parent_id WHERE 1=1 AND mr.role_id = ? AND menu.parent_id <>0 AND menu2.parent_id=0 ORDER BY menu.order_no 
+16:03:29.668 DEBUG c.w.c.s.m.SysMenuMapper.selectMenus - ==> Parameters: 1(Integer)
+16:03:29.764 DEBUG c.w.c.s.m.SysMenuMapper.selectMenus - <==      Total: 2
+16:03:29.800 DEBUG c.w.c.s.m.S.updateByPrimaryKeySelective - ==>  Preparing: UPDATE sys_user SET username = ?,nickname = ?,user_type = ?,last_login_date = ?,last_login_ip = ? WHERE id = ? 
+16:03:29.801 DEBUG c.w.c.s.m.S.updateByPrimaryKeySelective - ==> Parameters: admin(String), admin(String), 10001(Integer), 2018-03-05 16:03:29.774(Timestamp), 127.0.0.1(String), 1(Integer)
+16:03:29.975 DEBUG c.w.c.s.m.S.updateByPrimaryKeySelective - <==    Updates: 1
+16:47:06.136 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - ==>  Preparing: SELECT id,role_code,role_name,role_type,is_enable,updated_at,created_at,created_role,created_user FROM sys_role 
+16:47:06.155 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - ==> Parameters: 
+16:47:06.166 DEBUG c.w.c.s.m.SysRoleMapper.selectAll - <==      Total: 4
+16:47:06.169 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+16:47:06.169 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 1(Integer)
+16:47:06.237 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 2
+16:47:06.238 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+16:47:06.238 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 5(Integer)
+16:47:06.240 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 1
+16:47:06.241 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+16:47:06.241 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 6(Integer)
+16:47:06.242 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 0
+16:47:06.243 DEBUG c.w.c.s.m.S.selectByRoleId - ==>  Preparing: SELECT sp.*, sr.resource_url,sr.resource_name, srole.role_code,srole.role_name FROM `sys_permission` sp INNER JOIN sys_resource sr ON sr.id = sp.resource_id INNER JOIN sys_role srole ON srole.id = sp.role_id WHERE role_id=? 
+16:47:06.243 DEBUG c.w.c.s.m.S.selectByRoleId - ==> Parameters: 7(Integer)
+16:47:06.244 DEBUG c.w.c.s.m.S.selectByRoleId - <==      Total: 0
+16:47:06.286 DEBUG c.w.c.s.m.S.selectByExample - ==>  Preparing: SELECT id,resource_name,resource_url,query_string,updated_at,created_at FROM sys_resource 
+16:47:06.286 DEBUG c.w.c.s.m.S.selectByExample - ==> Parameters: 
+16:47:06.290 DEBUG c.w.c.s.m.S.selectByExample - <==      Total: 22
+16:47:06.418 DEBUG c.w.c.s.m.D.selectAll - ==>  Preparing: SELECT id,dict_name,description FROM data_dictionary 
+16:47:06.418 DEBUG c.w.c.s.m.D.selectAll - ==> Parameters: 
+16:47:06.422 DEBUG c.w.c.s.m.D.selectAll - <==      Total: 20
+16:47:06.514 DEBUG c.w.c.w.m.W.selectForDataRole - ==>  Preparing: SELECT id,nick_name FROM wechat_mps 
+16:47:06.515 DEBUG c.w.c.w.m.W.selectForDataRole - ==> Parameters: 
+16:47:06.516 DEBUG c.w.c.w.m.W.selectForDataRole - <==      Total: 2
+16:47:06.553 DEBUG c.w.c.s.m.S.selectOne - ==>  Preparing: SELECT id,config_name,config_value,config_type FROM simple_config WHERE config_name = ? 
+16:47:06.554 DEBUG c.w.c.s.m.S.selectOne - ==> Parameters: jwt-secret(String)
+16:47:06.615 DEBUG c.w.c.s.m.S.selectOne - <==      Total: 1
+16:49:31.119 DEBUG c.w.c.s.m.SysUserMapper.selectOne - ==>  Preparing: SELECT id,username,nickname,pwd,salt,tel,user_type,role_id,role_name,is_enabled,is_locked,created_user,enable_data_role,created_at,last_login_date,last_login_ip FROM sys_user WHERE username = ? AND pwd = ? 
+16:49:31.120 DEBUG c.w.c.s.m.SysUserMapper.selectOne - ==> Parameters: admin(String), e10adc3949ba59abbe56e057f20f883e(String)
+16:49:31.138 DEBUG c.w.c.s.m.SysUserMapper.selectOne - <==      Total: 1
+16:49:31.140 DEBUG c.w.c.s.m.S.selectByPrimaryKey - ==>  Preparing: SELECT id,role_code,role_name,role_type,is_enable,updated_at,created_at,created_role,created_user FROM sys_role WHERE id = ? 
+16:49:31.140 DEBUG c.w.c.s.m.S.selectByPrimaryKey - ==> Parameters: 1(Integer)
+16:49:31.142 DEBUG c.w.c.s.m.S.selectByPrimaryKey - <==      Total: 1
+16:49:31.146 DEBUG c.w.c.s.m.S.select - ==>  Preparing: SELECT id,sys_user_id,prefix_name,column_name,column_value,data_role_code,extends_user FROM sys_user_data_role WHERE sys_user_id = ? 
+16:49:31.146 DEBUG c.w.c.s.m.S.select - ==> Parameters: 1(Integer)
+16:49:31.148 DEBUG c.w.c.s.m.S.select - <==      Total: 1
+16:49:31.634 DEBUG c.w.c.s.m.SysMenuMapper.selectMenus - ==>  Preparing: SELECT menu2.*, menu.id id1, menu.parent_id parent_id1, menu.icon icon1, menu.menu_code menu_code1, menu.menu_name menu_name1, menu.menu_describe menu_describe1, menu.menu_href menu_href1, menu.query_string query_string1, menu.created_at created_at1, menu.updated_at updated_at1, menu.order_no order_no1 FROM sys_menu menu INNER JOIN sys_menu_role mr ON mr.menu_id = menu.id LEFT JOIN sys_menu menu2 ON menu2.id = menu.parent_id WHERE 1=1 AND mr.role_id = ? AND menu.parent_id <>0 AND menu2.parent_id=0 ORDER BY menu.order_no 
+16:49:31.635 DEBUG c.w.c.s.m.SysMenuMapper.selectMenus - ==> Parameters: 1(Integer)
+16:49:31.652 DEBUG c.w.c.s.m.SysMenuMapper.selectMenus - <==      Total: 2
+16:49:31.670 DEBUG c.w.c.s.m.S.updateByPrimaryKeySelective - ==>  Preparing: UPDATE sys_user SET username = ?,nickname = ?,user_type = ?,last_login_date = ?,last_login_ip = ? WHERE id = ? 
+16:49:31.671 DEBUG c.w.c.s.m.S.updateByPrimaryKeySelective - ==> Parameters: admin(String), admin(String), 10001(Integer), 2018-03-05 16:49:31.666(Timestamp), 127.0.0.1(String), 1(Integer)
+16:49:31.721 DEBUG c.w.c.s.m.S.updateByPrimaryKeySelective - <==    Updates: 1

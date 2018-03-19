@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wmeimob.kexiang.wechat.mapper.OrdermMapper" >
+  <resultMap id="BaseResultMap" type="com.wmeimob.kexiang.wechat.entity.Orderm" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="rec_person" property="recPerson" jdbcType="VARCHAR" />
+    <result column="rec_tel" property="recTel" jdbcType="VARCHAR" />
+    <result column="rec_unit_name" property="recUnitName" jdbcType="VARCHAR" />
+    <result column="rec_province_id" property="recProvinceId" jdbcType="INTEGER" />
+    <result column="rec_province" property="recProvince" jdbcType="VARCHAR" />
+    <result column="rec_city_id" property="recCityId" jdbcType="INTEGER" />
+    <result column="rec_city" property="recCity" jdbcType="VARCHAR" />
+    <result column="rec_area_id" property="recAreaId" jdbcType="INTEGER" />
+    <result column="rec_area" property="recArea" jdbcType="VARCHAR" />
+    <result column="rec_detail_adress" property="recDetailAdress" jdbcType="VARCHAR" />
+    <result column="rec_mode" property="recMode" jdbcType="INTEGER" />
+    <result column="mail_person" property="mailPerson" jdbcType="VARCHAR" />
+    <result column="mail_tel" property="mailTel" jdbcType="VARCHAR" />
+    <result column="mail_unit_name" property="mailUnitName" jdbcType="VARCHAR" />
+    <result column="mail_province_id" property="mailProvinceId" jdbcType="INTEGER" />
+    <result column="mail_province" property="mailProvince" jdbcType="VARCHAR" />
+    <result column="mail_city_id" property="mailCityId" jdbcType="INTEGER" />
+    <result column="mail_city" property="mailCity" jdbcType="VARCHAR" />
+    <result column="mail_area_id" property="mailAreaId" jdbcType="INTEGER" />
+    <result column="mail_area" property="mailArea" jdbcType="VARCHAR" />
+    <result column="mail_detail_adress" property="mailDetailAdress" jdbcType="VARCHAR" />
+    <result column="mail_time" property="mailTime" jdbcType="DATE" />
+    <result column="arrive_time" property="arriveTime" jdbcType="DATE" />
+    <result column="receipt" property="receipt" jdbcType="INTEGER" />
+    <result column="total_freight" property="totalFreight" jdbcType="DECIMAL" />
+    <result column="coverage" property="coverage" jdbcType="DECIMAL" />
+    <result column="premium" property="premium" jdbcType="DECIMAL" />
+    <result column="total_payments" property="totalPayments" jdbcType="DECIMAL" />
+    <result column="prepayment" property="prepayment" jdbcType="DECIMAL" />
+    <result column="prepayment_cash" property="prepaymentCash" jdbcType="DECIMAL" />
+    <result column="prepayment_oil_card" property="prepaymentOilCard" jdbcType="DECIMAL" />
+    <result column="total_receipt" property="totalReceipt" jdbcType="DECIMAL" />
+    <result column="receipt_cash" property="receiptCash" jdbcType="DECIMAL" />
+    <result column="receipt_oil_card" property="receiptOilCard" jdbcType="DECIMAL" />
+    <result column="fad_payment" property="fadPayment" jdbcType="DECIMAL" />
+    <result column="month_balance" property="monthBalance" jdbcType="DECIMAL" />
+    <result column="coolie_hire" property="coolieHire" jdbcType="DECIMAL" />
+    <result column="other" property="other" jdbcType="DECIMAL" />
+    <result column="carriage_company" property="carriageCompany" jdbcType="VARCHAR" />
+    <result column="driver_name" property="driverName" jdbcType="VARCHAR" />
+    <result column="driver_tel" property="driverTel" jdbcType="VARCHAR" />
+    <result column="driver_card" property="driverCard" jdbcType="VARCHAR" />
+    <result column="plate_number" property="plateNumber" jdbcType="VARCHAR" />
+    <result column="orderNo" property="orderno" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="DATE"/>
+    <result column="isrefer" property="isrefer" jdbcType="INTEGER"/>
+    <result column="openid" property="openid" jdbcType="VARCHAR"/>
+    <result column="carriage_id" property="carriageId" jdbcType="INTEGER"/>
+  </resultMap>
+  
+  <resultMap type="com.wmeimob.kexiang.wechat.entity.OrdermVo" id="BaseResultVoMap" extends="BaseResultMap">
+  		<result column="member_name" property="memberName" jdbcType="VARCHAR"/>
+  		<result column="detail_address" property="detailAddress" jdbcType="VARCHAR"/>
+  </resultMap>
+  
+  
+  <select id="selectOrder" parameterType="map" resultMap="BaseResultVoMap">
+             select *,concat(o.rec_province,o.rec_city,o.rec_area,o.rec_detail_adress) as detail_address from orderm o ,member m where o.openid = m.openid
+             and isrefer = 1
+             	<if test="orderNo != null">
+             		AND orderNo like "%"#{orderNo}"%"
+             	</if>
+             	<if test='startT != null and endT != null'> 
+             		AND (o.create_time between #{startT} and #{endT})
+             	</if>
+  </select>
+  
+  <select id="selectByprimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultVoMap">
+  		select * from orderm o ,member m where o.openid = m.openid  and o.id = #{id}
+  </select>
+</mapper>

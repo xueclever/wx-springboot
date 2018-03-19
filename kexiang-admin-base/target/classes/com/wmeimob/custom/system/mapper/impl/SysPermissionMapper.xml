@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wmeimob.custom.system.mapper.SysPermissionMapper">
+    <resultMap id="BaseResultMap" type="com.wmeimob.custom.system.entity.SysPermission">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="resource_id" property="resourceId" jdbcType="INTEGER"/>
+        <result column="role_id" property="roleId" jdbcType="INTEGER"/>
+        <result column="allow_get" property="allowGet" jdbcType="BIT"/>
+        <result column="allow_post" property="allowPost" jdbcType="BIT"/>
+        <result column="allow_put" property="allowPut" jdbcType="BIT"/>
+        <result column="allow_delete" property="allowDelete" jdbcType="BIT"/>
+        <result column="updated_at" property="updatedAt" jdbcType="TIMESTAMP"/>
+        <result column="created_at" property="createdAt" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <resultMap id="fullResultMap" extends="BaseResultMap" type="com.wmeimob.custom.system.entity.SysPermission">
+        <result column="resource_url" property="resourceUrl" jdbcType="VARCHAR"/>
+        <result column="role_code" property="roleCode" jdbcType="VARCHAR"/>
+        <result column="resource_name" property="resourceName" jdbcType="VARCHAR"/>
+        <result column="role_name" property="roleName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectByRoleId" resultMap="fullResultMap">
+        SELECT
+	      sp.*, sr.resource_url,sr.resource_name,
+	      srole.role_code,srole.role_name
+        FROM `sys_permission` sp
+        INNER JOIN sys_resource sr ON sr.id = sp.resource_id
+        INNER JOIN sys_role srole ON srole.id = sp.role_id
+        WHERE role_id=#{roleId}
+    </select>
+
+    <select id="selectByResourceIdAndRoleType" resultMap="fullResultMap">
+        SELECT
+            sp.id,
+            sr.id role_id,
+            sr.role_name,
+            sr.role_code,
+            sp.resource_id,
+            sp.allow_delete,
+            sp.allow_get,
+            sp.allow_post,
+            sp.allow_put
+        FROM
+            sys_role sr
+        LEFT JOIN sys_permission sp ON sp.role_id = sr.id
+        AND sp.resource_id = #{resourceId}
+        WHERE 1=1
+        <if test="createdRole !=null ">
+            AND sr.created_role = #{createdRole}
+        </if>
+        <if test="createdUser !=null ">
+            AND sr.created_user = #{createdUser}
+        </if>
+    </select>
+</mapper>

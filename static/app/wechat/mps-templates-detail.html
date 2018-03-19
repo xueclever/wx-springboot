@@ -1,0 +1,131 @@
+<form id="tmp-fm" action="javascript:" method="POST">
+    <div class="row">
+        <table class="table table-striped table-bordered table-hover" width="100%">
+            <tr>
+                <th>模板编号</th>
+                <td> <input type="text" class=" input-medium form-control inline" name="templateShortId" placeholder="请填写微信模板消息编号"
+                    /></td>
+            </tr>
+            <tr>
+                <th>模板标题</th>
+                <td> <input type="text" class=" input-medium form-control inline" name="templateName" placeholder="请填写微信模板消息标题"
+                    /></td>
+            </tr>
+            <tr>
+                <th>消息说明</th>
+                <td> <input type="text" class=" input-medium form-control inline" name="remark" placeholder="请填写模板消息说明" /></td>
+            </tr>
+            <tr>
+                <th>消息链接</th>
+                <td> <input type="text" class=" input-medium form-control inline" name="detailHref" placeholder="http://example.com/"
+                    /></td>
+            </tr>
+            <tr>
+                <th>详细内容</th>
+                <td>
+                    <textarea name="detail" cols="30" rows="10"></textarea>
+                    <button type="button" class="btn btn-sm gray right  radius6" onclick="decodeContent()"><i class="fa fa-code"></i> 解析</button>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+
+
+<div class="row">
+        <table id="decode-tb" class="table table-striped table-bordered table-hover"  width="100%">
+        </table>
+        <button type="button" class="btn green right  radius6" onclick="save()"><i class="fa fa-save"></i> 保存</button>
+        <button type="button" class="btn dark btn-outline radius6" onclick="javascript:backToTemp()"><i class="fa fa-close"></i> 关闭 </button>
+    </div>
+</form>
+
+
+
+<script type="text/javascript">
+    var id = sessionStorage.getItem("tmpId");
+    if (id != null && id != "" && id != "undefined" && id != "null") {
+        Shinez.get("/template-msg/" + id, function (ret) {
+            if (ret.code == 0) {
+                var obj = ret.data.wechatTemplate;
+                $.each(obj, function (k, v) {
+                    $("*[name=" + k + "]").val(v);
+                });
+                if (obj.detailList != null && obj.detailList.length > 0) {
+                    for (var i = 0; i < obj.detailList.length; ++i) {
+                        $("#decode-tb").append('<tr><th>' + obj.detailList[i].fieldName + '</th>' +
+                            '<td><input type="hidden" name="detailId" value="'+obj.detailList[i].id+'" />'
+                            +'<input type="hidden" name="fieldName" value="' + obj.detailList[i].fieldName + '" />'
+                            +'<textarea style="position:relative;top:12px" class=" input-medium form-control inline" name="fieldValue">'+(obj.detailList[i].fieldValue==null?" ":obj.detailList[i].fieldValue)+'</textarea>'
+                            +'<input  class="input-small form-control inline" style="height:52px;width: 64px !important;" name="fieldColor" value="'+obj.detailList[i].fieldColor+'" type="color"/></td></tr>'
+                        );
+                    }
+                }
+            }
+        })
+    }
+    sessionStorage.removeItem("tmpId");
+
+    function decodeContent() {
+        $("#decode-tb").html("");
+        var content = $("*[name=detail]").val();
+        var p = /\{\{(.*?)\}\}/g;
+        var fields = content.match(p);
+        fields.forEach(function (f) {
+            var fname = f.replace(/{{/g, "").replace(/}}/g, "");
+            $("#decode-tb").append('<tr><th>' + fname + '</th>' +
+                '<td><input type="hidden" name="fieldName" value="' + fname +'" />'
+                +'<textarea style="position:relative;top:12px" type="text" class=" input-medium form-control inline" name="fieldValue" value=" "></textarea>'
+                +'<input style="height:52px;width: 64px !important;" class="input-small form-control inline" name="fieldColor" type="color"/></td></tr>'
+            );
+        });
+    }
+
+    function backToTemp() {
+        loadHtml("/base/mps-templates");
+    }
+
+    function save() {
+        var obj = $("#tmp-fm").serializeObject();
+        if (obj.fieldName == null) {
+            Shinez.tip("error", "请填写必要信息");
+        }
+        var detailList = [];
+        for (var i = 0; i < obj.fieldName.length; i++) {
+            detailList.push({
+                id:obj.detailId==null?null:obj.detailId[i],
+                fieldName: obj.fieldName[i],
+                fieldValue: obj.fieldValue[i],
+                fieldColor: obj.fieldColor[i],
+            });
+        }
+        obj.detailList = detailList;
+        console.log(obj);
+
+        if (id != null && id != "" && id != "undefined" && id != "null") {
+            obj.id = id;
+            Shinez.xhr("PUT", "/template-msg/"+id, JSON.stringify(obj), true, function (ret) {
+            if (ret.code == 0) {
+                Shinez.tip("success", "保存成功");
+                backToTemp();
+            }
+            if (ret.code == -1) {
+                Shinez.tip("error", ret.msg);
+            }
+           }, "json", "application/json")
+        }else{
+            Shinez.xhr("POST", "/template-msg", JSON.stringify(obj), true, function (ret) {
+            if (ret.code == 0) {
+                Shinez.tip("success", "添加成功");
+                backToTemp();
+            }
+            if (ret.code == -1) {
+                Shinez.tip("error", ret.msg);
+            }
+           }, "json", "application/json")
+        }
+
+
+
+    }
+</script>
